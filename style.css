@@ -1,0 +1,71 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+#header-container{
+    background-color: white;
+}
+
+#header-content{
+    display:flex;
+    justify-content: space-between;
+}
+
+.nav-logo{
+    display: flex;
+    align-items: center;
+}
+
+.nav-overlay{
+    background-color: inherit;
+    border:0;
+    margin: 10px;
+}
+
+div.nav-link-button{
+    display: flex;
+}
+
+ul.nav-text{
+    display: flex;
+}
+
+li.home, li.contact, li.progress{
+    list-style: none;
+    margin:10px;
+}
+
+li>a{ 
+    text-decoration: none;
+    color:black;
+}
+
+.register{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    margin: 10px;
+}
+
+button.login{
+    padding:8px;
+    color:#39739d;
+    background-color:#e1ecf4;
+    border: 1px solid #e1ecf4;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button.get-started{
+    padding:8px;
+    color:#ffffff;
+    background-color:#0a95ff;
+    border: 1px solid #0a95ff;
+    border-radius: 6px; 
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 8px;
+}
