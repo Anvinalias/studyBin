@@ -87,13 +87,16 @@ button.get-started{
     background-color: #d7d5d5;
 }
 
+.search-bar{
+    display: flex;
+}
+
 #search{
     border:1px solid grey;
     border-radius: 999px;
     font-size: 20px;
     padding:16px 20px;
     width: 36vw;
-
 }
 
 .section-1-heading{
@@ -106,3 +109,6 @@ button.get-started{
     margin-bottom: 25px;
 }
 
+.section-2{
+    height: 60vh;
+}
