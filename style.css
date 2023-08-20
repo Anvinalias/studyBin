@@ -5,7 +5,10 @@ body{
 }
 
 #header-container{
-    background-color: white;
+    background-color: rgb(215, 213, 213);
+    width:100vw;
+    position: fixed;
+    top: 0;
 }
 
 #header-content{
@@ -50,7 +53,7 @@ li>a{
 }
 
 button.login{
-    padding:8px;
+    padding:8px 12px;
     color:#39739d;
     background-color:#e1ecf4;
     border: 1px solid #e1ecf4;
@@ -68,4 +71,13 @@ button.get-started{
     font-size: 16px;
     font-weight: bold;
     margin-right: 8px;
+}
+
+.section-1{
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
