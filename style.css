@@ -128,6 +128,20 @@ button.get-started{
     height: 60vh;
 }
 
+.section-2-text{
+    text-align: center;
+}
+
 .section-2-heading{
     font-size: 2.5rem;
+    margin: 3.5rem 0 1rem 0 
+}
+
+.section-2-quote{
+    font-size: 1.5rem;
+}
+
+.section-2-counts{
+    display: flex;
+    gap:20px
 }
