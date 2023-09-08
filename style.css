@@ -1,6 +1,9 @@
-/* Custom properties */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Ubuntu&display=swap');
+  
+  /* Custom properties */
 :root{
     --background-color: #d7d5d5;
+    --text-font:'Roboto Mono', monospace;
 }
 
 /* Remove custom styles of elements */
@@ -36,6 +39,25 @@
     margin: 10px;
 }
 
+.menubar{
+    height: 38px;
+}
+
+.site-logo-name{
+    display:flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.site-logo-name > img{
+    height: 46px;
+}
+
+.site-name{
+    font-size: 32px;
+    font-family: var(--text-font);
+}
+
 div.nav-link-button{
     display: flex;
 }
@@ -53,6 +75,7 @@ li.home, li.contact, li.progress{
 li>a{ 
     text-decoration: none;
     color:black;
+    font-family: var(--text-font);
 }
 
 .register{
@@ -97,11 +120,14 @@ button.get-started{
 .section-1-heading{
     font-size: 4rem;
     margin-bottom: 1.3rem;
+    font-family: var(--text-font);
 }
 
 .section-1-quote{
-    font-size: 1.2rem;
-    margin-bottom: 12px;
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+    font-family: var(--text-font);
+
 }
 
 /* search portion */
@@ -112,7 +138,7 @@ button.get-started{
 #search{
     font-size: 20px;
     border:0;
-    padding:16px 20px;
+    padding:14px 32px;
     background-color: var(--background-color);
     border-radius: 5em;
 }
@@ -152,6 +178,35 @@ input:-webkit-autofill
     display:flex;
 }
 
+.arrow-icon{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 40px;
+    background-color: var(--background-color);
+    border:none;
+    height: 80px;
+    width: 80px;
+   animation: movement 2s cubic-bezier(0.46, 0.03, 0.52, 0.96) infinite;
+}
+
+@keyframes movement{
+    0%{
+        transform: translateY(0%)
+    }
+
+    50%{
+        transform: translateY(25%)
+    }
+
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+.arrow-icon > img{
+    height: 60px;  
+}
+
 /* Section 2 */
 .section-2{
     height: 60vh;
@@ -166,11 +221,14 @@ input:-webkit-autofill
 .section-2-heading{
     font-size: 2.5rem;
     margin-bottom:1rem;
+    font-family: var(--text-font);
+
 }
 
 .section-2-quote{
     font-size: 1.5rem;
     margin-bottom: 2.5rem;
+    font-family: var(--text-font);
 }
 
 .section-2-counts{
@@ -211,17 +269,18 @@ input:-webkit-autofill
     flex-direction: column;
     text-align: center;
     background-color: var(--background-color);
-
 }
 
 .section-3-heading{
     font-size: 2.5rem;
-    margin-bottom:1rem
+    margin-bottom:1rem;
+    font-family: var(--text-font);
 }
 
 .section-3-quote{
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    font-family: var(--text-font);
 }
 
 .section-3-link{
@@ -235,4 +294,6 @@ input:-webkit-autofill
     background-color: white;
     margin: auto;
     text-decoration: none;
+    font-family: var(--text-font);
+
 }
