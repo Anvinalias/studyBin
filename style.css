@@ -3,7 +3,7 @@
   /* Custom properties */
 :root{
     --background-color: #d7d5d5;
-    --text-font:'Roboto Mono', monospace;
+    --text-font:'Roboto Mono', monospace, sans-serif;
 }
 
 /* Remove custom styles of elements */
@@ -11,7 +11,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family:sans-serif;
+    font-family:var(--text-font);
 }
 
 /* Header styling */
@@ -55,7 +55,6 @@
 
 .site-name{
     font-size: 32px;
-    font-family: var(--text-font);
 }
 
 div.nav-link-button{
@@ -72,10 +71,9 @@ li.home, li.contact, li.progress{
     margin:10px;
 }
 
-li>a{ 
+li > a{ 
     text-decoration: none;
     color:black;
-    font-family: var(--text-font);
 }
 
 .register{
@@ -107,26 +105,24 @@ button.get-started{
 
 /* Section 1 */
 .section-1{
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 100px 0 50px;
+    padding: 120px 0 60px;
     background-color: var(--background-color);
 }
 
 .section-1-heading{
     font-size: 4rem;
     margin-bottom: 1.3rem;
-    font-family: var(--text-font);
 }
 
 .section-1-quote{
     font-size: 1.5rem;
     margin-bottom: 24px;
-    font-family: var(--text-font);
 
 }
 
@@ -168,7 +164,7 @@ input:-webkit-autofill
     margin-right: 10px;
 }
 
-.search-icon>img{
+.search-icon > img{
     height: 40px; 
 }
 
@@ -179,14 +175,12 @@ input:-webkit-autofill
 }
 
 .arrow-icon{
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 40px;
     background-color: var(--background-color);
     border:none;
-    height: 80px;
+    height: 110px;
     width: 80px;
-   animation: movement 2s cubic-bezier(0.46, 0.03, 0.52, 0.96) infinite;
+    padding-top: 50px;
+    animation: movement 2s ease infinite;
 }
 
 @keyframes movement{
@@ -209,7 +203,7 @@ input:-webkit-autofill
 
 /* Section 2 */
 .section-2{
-    height: 60vh;
+    min-height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -221,14 +215,11 @@ input:-webkit-autofill
 .section-2-heading{
     font-size: 2.5rem;
     margin-bottom:1rem;
-    font-family: var(--text-font);
-
 }
 
 .section-2-quote{
     font-size: 1.5rem;
     margin-bottom: 2.5rem;
-    font-family: var(--text-font);
 }
 
 .section-2-counts{
@@ -262,7 +253,7 @@ input:-webkit-autofill
 
 /* Section 3 */
 .section-3{
-    height: 40vh;
+    min-height: 40vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -274,13 +265,11 @@ input:-webkit-autofill
 .section-3-heading{
     font-size: 2.5rem;
     margin-bottom:1rem;
-    font-family: var(--text-font);
 }
 
 .section-3-quote{
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    font-family: var(--text-font);
 }
 
 .section-3-link{
@@ -294,6 +283,5 @@ input:-webkit-autofill
     background-color: white;
     margin: auto;
     text-decoration: none;
-    font-family: var(--text-font);
 
 }
