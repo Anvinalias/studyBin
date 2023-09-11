@@ -286,3 +286,8 @@ input:-webkit-autofill
     text-decoration: none;
 
 }
+@media (max-width: 40em){
+    div.nav-link-button{
+        display: none;
+    }
+}
