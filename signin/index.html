@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>studyBin</title>
+      <link rel="icon" href="/icons/logo.svg">
+      <link rel="stylesheet" href="css/style.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <script src="js/index.js" defer></script>
+      <script src="js/owasp-password-strength-test.js"></script>
+      <script src="https://unpkg.com/vh-check/dist/vh-check.min.js"></script>
+      <link href="https://fonts.googleapis.com/css2?family=Jaldi&family=Manrope:wght@400;700&display=swap" rel="stylesheet"/>
+      <script
+         src="https://kit.fontawesome.com/6faef4fc76.js"
+         crossorigin="anonymous"
+      ></script>
+   </head>
+   <body>
+      <div class="blur"></div>
+      <main>
+         <section class="media-container">
+            <!-- At Desk Vectors by Vecteezy: https://www.vecteezy.com/free-vector/at-desk -->
+            <img
+               class="vector"
+               src="images/4354884.svg"
+               alt="vector drawing"
+            />
+         </section>
+         <section class="form-container">
+            <h1>Sign in</h1>
+            <form spellcheck="false" autocomplete="off">
+               <div class="form-inputs">
+                  <div class="input-group">
+                     <div class="error hide">Name cannot be empty</div>
+                     <label for="name"><i class="fa-regular fa-user"></i></label>
+                     <input
+                        id="name"
+                        type="text"
+                        name="name"
+                        placeholder="Username"
+                        required
+                     />
+                  </div>
+
+                 
+                  </div>
+
+                  <div class="input-group">
+                     <div class="error hide">Password is not strong enough</div>
+                     <label for="password"
+                        ><img class="lock" src="images/lock.svg" alt="lock"
+                     /></label>
+                     <input
+                        id="password"
+                        type="password"
+                        placeholder="Password"
+                        name="password"
+                        required
+                     />
+                     <div class="indicator hide">
+                        <span class="weak"></span>
+                        <span class="medium transparent"></span>
+                        <span class="strong transparent"></span>
+                     </div>
+                  </div>
+
+                  
+               </div>
+
+              
+               <button>
+                  <span>Continue</span>
+                  <svg
+                     class="checkmark hide"
+                     xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 52 52"
+                  >
+                     <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none" />
+                     <path
+                        class="checkmark-check"
+                        fill="none"
+                        d="M14.1 27.2l7.1 7.2 16.7-16.8"
+                     />
+                  </svg>
+               </button>
+
+            </form>
+         </section>
+      </main>
+   </body>
+</html>
