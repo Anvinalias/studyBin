@@ -4,7 +4,10 @@
 :root {
     --background-color: #d7d5d5;
     --text-font: 'Roboto Mono', monospace, sans-serif;
-}
+
+     --light-text:rgb(130, 132, 144);
+     --hover-link: rgb(45, 109, 212);
+    }
 
 
 html{
@@ -111,6 +114,61 @@ button.get-started {
     border-radius: 6px;
     font-size: 16px;
     font-weight: bold;
+}
+
+/* side nav */
+  
+.nav-overlay {
+    background-color: inherit;
+    border: 0;
+    margin: .5rem;
+}
+
+.menubar {
+    min-height: 2.5rem;
+}
+
+#side-nav {
+    background-color: rgb(26, 26, 33);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.075);
+    display: grid;
+    padding: 46px;
+    row-gap: 20px;
+}
+
+#side-wrapper{
+    width: 0;
+    overflow-x: hidden;
+    transition: width .6s ease-in-out;
+    position: absolute;
+    top: 80px;
+}
+
+#side-wrapper.active{
+    width : 250px;
+}
+
+#side-nav a {
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    color: var(--light-text);
+    padding-left:  30px;
+    text-decoration: none;
+}
+
+#side-nav a:hover {
+    color: var(--hover-link);
+}
+
+#side-nav .h-divider {
+    background-color: rgb(64, 64, 74);
+}
+
+#dash-title {
+    color: white;
+    font-size: 22px;
+    font-weight: 400;
 }
 
 /* Section 1 */

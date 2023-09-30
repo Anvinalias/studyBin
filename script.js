@@ -1,3 +1,10 @@
+// Wait for the DOM to be fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("side-button").addEventListener("click", function() {
+        document.getElementById("side-wrapper").classList.toggle("active");
+    });
+  });
+
 // goto a certain section of the page
 document.addEventListener('DOMContentLoaded', function () {
     const scrollButton = document.getElementById('arrow-icon');
@@ -6,3 +13,4 @@ document.addEventListener('DOMContentLoaded', function () {
         targetSection.scrollIntoView({ behavior: 'smooth' });
     });
 });
+
