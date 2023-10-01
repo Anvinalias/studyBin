@@ -169,10 +169,39 @@ button.get-started {
     color: var(--hover-link);
 }
 
-#dash-title {
+
+#side-nav-head{
+    display: flex;
+}
+
+.nav-head {
+    display: flex;
+    align-items: center;
+    gap: 5px;
     color: white;
     font-size: 22px;
     font-weight: 400;
+}
+
+.nav-head > img{
+    height: 2.2rem;
+}
+
+.nav-site-name{
+    font-size:1.5rem;
+}
+
+#nav-close{
+    background-color: inherit;
+    border: none;
+    position: absolute;
+    top: 16px;
+    right: 10px;
+    margin: 6px 8px 0 0;
+}
+
+#nav-close > img{
+    width: 26px;
 }
 
 #home {
