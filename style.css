@@ -175,6 +175,61 @@ button.get-started {
     font-weight: 400;
 }
 
+#home {
+    background-image: url(icons/home.svg);
+  
+}
+
+#home:hover {
+    background-image: url(icons/home-h.svg);
+}
+
+#exchange {
+    background-image: url(icons/exchange.svg);
+
+}
+
+#exchange:hover {
+    background-image: url(icons/exchange-h.svg);
+}
+
+#file {
+    background-image: url(icons/file.svg);
+
+}
+
+#file:hover {
+    background-image: url(icons/file-h.svg);
+}
+
+
+#community {
+    background-image: url(icons/community.svg);
+
+}
+
+#community:hover {
+    background-image: url(icons/community-h.svg);
+}
+
+#settings {
+    background-image: url(icons/settings.svg);
+
+}
+
+#settings:hover {
+    background-image: url(icons/settings-h.svg);
+}
+
+#logout {
+    background-image: url(icons/logout.svg);
+
+}
+
+#logout:hover {
+    background-image: url(icons/logout-h.svg);
+}
+
 /* Section 1 */
 #section-1 {
     min-height: 100vh;
