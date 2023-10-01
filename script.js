@@ -3,6 +3,9 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("side-button").addEventListener("click", function() {
         document.getElementById("side-wrapper").classList.toggle("active");
     });
+    document.getElementById("page-content-wrapper").addEventListener("click", function() {
+        document.getElementById("side-wrapper").classList.remove("active");
+    });
   });
 
 // goto a certain section of the page

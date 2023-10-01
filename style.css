@@ -128,24 +128,32 @@ button.get-started {
     min-height: 2.5rem;
 }
 
+.divider {
+    background-color: rgb(64, 64, 74);
+    height: 1px;
+    width: 100%;
+  }
+
 #side-nav {
     background-color: rgb(26, 26, 33);
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.075);
     display: grid;
     padding: 46px;
     row-gap: 20px;
+    height: 100vh;
 }
 
 #side-wrapper{
     width: 0;
     overflow-x: hidden;
     transition: width .6s ease-in-out;
-    position: absolute;
-    top: 80px;
+    position: fixed;
+    z-index: 1;
 }
 
 #side-wrapper.active{
     width : 250px;
+
 }
 
 #side-nav a {
@@ -159,10 +167,6 @@ button.get-started {
 
 #side-nav a:hover {
     color: var(--hover-link);
-}
-
-#side-nav .h-divider {
-    background-color: rgb(64, 64, 74);
 }
 
 #dash-title {
