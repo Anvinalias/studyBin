@@ -159,7 +159,7 @@ input:not(:focus):placeholder-shown {
   grid-auto-rows: max-content;
   grid-template: max-content / max-content;
   padding: 46px;
-  row-gap: 20px;
+  row-gap: 30px;
 }
 
 .side-nav a {
@@ -180,10 +180,17 @@ input:not(:focus):placeholder-shown {
   background-color: rgb(64, 64, 74);
 }
 
-#dash-title {
+.nav-head {
+  display: flex;
+  align-items: center;
+  gap: 5px;
   color: white;
   font-size: 22px;
   font-weight: 400;
+}
+
+.nav-head > img{
+  height: 2.2rem;
 }
 
 .section-title {
@@ -199,11 +206,6 @@ input:not(:focus):placeholder-shown {
   display: flex;
   gap: 6px;
   margin: 35px 30px 15px 30px;
-}
-
-.upload-links li {
-  display: inline;
-  list-style-type: none;
 }
 
 .upload-links a,
@@ -239,12 +241,12 @@ input:not(:focus):placeholder-shown {
 #resource-folder {
   display: grid;
   gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   grid-auto-rows: max-content;
   margin-left: 30px;
 }
 
-#news{
+#updates{
   margin-top: 12px;
 }
 
@@ -346,4 +348,25 @@ input:not(:focus):placeholder-shown {
 
 #logout:hover {
   background-image: url(img/logout-h.svg);
+}
+
+.upload {
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  color: var(--light-text);
+  padding-left:  25px;
+  text-decoration: none;
+}
+
+.side-nav a:hover {
+  color: var(--hover-link);
+}
+
+.upload {
+  background-image: url(img/upload.svg);
+}
+
+.upload:hover{
+  background-image: url(img/upload-h.svg);
 }
