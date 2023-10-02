@@ -181,7 +181,7 @@ input:not(:focus):placeholder-shown {
   grid-auto-rows: max-content;
   grid-template: max-content / max-content;
   padding: 46px;
-  row-gap: 20px;
+  row-gap: 30px;
 }
 
 .side-nav a {
@@ -202,10 +202,17 @@ input:not(:focus):placeholder-shown {
   background-color: rgb(64, 64, 74);
 }
 
-#dash-title {
+.nav-head {
+  display: flex;
+  align-items: center;
+  gap: 5px;
   color: white;
   font-size: 22px;
   font-weight: 400;
+}
+
+.nav-head>img {
+  height: 2.2rem;
 }
 
 .section-title {
