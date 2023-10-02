@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 :root {
- --dark-text:rgb(65, 69, 81);
- --light-text:rgb(130, 132, 144);
- --hover-link: rgb(45, 109, 212);
- --background-col: rgb(246 247 251);
+  --dark-text: rgb(65, 69, 81);
+  --light-text: rgb(130, 132, 144);
+  --hover-link: rgb(45, 109, 212);
+  --background-col: rgb(246 247 251);
 }
 
 * {
@@ -36,7 +36,7 @@ h3 {
   line-height: 1.4;
 }
 
-p, 
+p,
 p a {
   font-size: 14px;
   font-weight: 400;
@@ -88,7 +88,7 @@ input:not(:focus):placeholder-shown {
 }
 
 .top-nav {
-  grid-area: 1 / 2 / 2 / 4 ;
+  grid-area: 1 / 2 / 2 / 4;
   padding-top: 20px;
 }
 
@@ -146,7 +146,7 @@ input:not(:focus):placeholder-shown {
   gap: 20px;
 }
 
-.admin{
+.admin {
   color: var(--dark-text);
 }
 
@@ -189,7 +189,7 @@ input:not(:focus):placeholder-shown {
   background-repeat: no-repeat;
   background-size: 18px 18px;
   color: var(--light-text);
-  padding-left:  30px;
+  padding-left: 30px;
   text-decoration: none;
 }
 
@@ -247,14 +247,14 @@ input:not(:focus):placeholder-shown {
   margin-bottom: 50px;
 }
 
-.approve-head{
+.approve-head {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 0 45px 0 20px;
 }
 
-.approve{
+.approve {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
@@ -274,7 +274,7 @@ input:not(:focus):placeholder-shown {
   height: 200px;
 }
 
-.context{
+.context {
   margin-top: 6px;
   font-size: 17px;
 }
@@ -392,4 +392,21 @@ input:not(:focus):placeholder-shown {
 
 .reject {
   background-image: url(img/cross.svg);
+}
+
+.upload {
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  color: var(--light-text);
+  padding-left: 25px;
+  text-decoration: none;
+}
+
+.upload {
+  background-image: url(img/upload.svg);
+}
+
+.upload:hover {
+  background-image: url(img/upload-h.svg);
 }

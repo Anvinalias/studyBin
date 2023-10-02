@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 :root {
- --dark-text:rgb(65, 69, 81);
- --light-text:rgb(130, 132, 144);
- --hover-link: rgb(45, 109, 212);
- --background-col: rgb(246 247 251);
+  --dark-text: rgb(65, 69, 81);
+  --light-text: rgb(130, 132, 144);
+  --hover-link: rgb(45, 109, 212);
+  --background-col: rgb(246 247 251);
 }
 
 * {
@@ -36,7 +36,7 @@ h3 {
   line-height: 1.4;
 }
 
-p, 
+p,
 p a {
   font-size: 14px;
   font-weight: 400;
@@ -88,7 +88,7 @@ input:not(:focus):placeholder-shown {
 }
 
 .top-nav {
-  grid-area: 1 / 2 / 2 / 4 ;
+  grid-area: 1 / 2 / 2 / 4;
   padding-top: 20px;
 }
 
@@ -136,7 +136,7 @@ input:not(:focus):placeholder-shown {
   width: 100%;
 }
 
-.username{
+.username {
   color: var(--dark-text);
 }
 
@@ -167,7 +167,7 @@ input:not(:focus):placeholder-shown {
   background-repeat: no-repeat;
   background-size: 18px 18px;
   color: var(--light-text);
-  padding-left:  30px;
+  padding-left: 30px;
   text-decoration: none;
 }
 
@@ -189,7 +189,7 @@ input:not(:focus):placeholder-shown {
   font-weight: 400;
 }
 
-.nav-head > img{
+.nav-head>img {
   height: 2.2rem;
 }
 
@@ -227,11 +227,11 @@ input:not(:focus):placeholder-shown {
   margin-bottom: 50px;
 }
 
-.program{
+.program {
   margin: 20px 0 0 30px;
 }
 
-.resource-head{
+.resource-head {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -246,11 +246,11 @@ input:not(:focus):placeholder-shown {
   margin-left: 30px;
 }
 
-#updates{
+#updates {
   margin-top: 12px;
 }
 
-.folder{
+.folder {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -290,7 +290,7 @@ input:not(:focus):placeholder-shown {
   grid-column: 1 / -1;
 }
 
-.folder{
+.folder {
   width: 128px;
   height: 128px;
 }
@@ -355,18 +355,14 @@ input:not(:focus):placeholder-shown {
   background-repeat: no-repeat;
   background-size: 20px 20px;
   color: var(--light-text);
-  padding-left:  25px;
+  padding-left: 25px;
   text-decoration: none;
-}
-
-.side-nav a:hover {
-  color: var(--hover-link);
 }
 
 .upload {
   background-image: url(img/upload.svg);
 }
 
-.upload:hover{
+.upload:hover {
   background-image: url(img/upload-h.svg);
 }
