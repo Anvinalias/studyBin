@@ -366,3 +366,41 @@ input:not(:focus):placeholder-shown {
 .upload:hover {
   background-image: url(img/upload-h.svg);
 }
+
+/* testing */
+
+#upload-links {
+  justify-content: center;
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+
+}
+
+#upload-links a,
+#upload-links a:hover,
+#upload-links a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+#upload-links a:hover {
+  color: var(--hover-link);
+}
+
+.profile {
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  color: var(--light-text);
+  padding-left: 20px;
+  text-decoration: none;
+}
+
+.profile {
+  background-image: url(img/admin.svg);
+}
+
+.profile:hover {
+  background-image: url(img/admin-h.svg);
+}
