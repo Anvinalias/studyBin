@@ -170,7 +170,6 @@ button.get-started {
     color: var(--hover-link);
 }
 
-
 #side-nav-head{
     display: flex;
 }
@@ -219,10 +218,16 @@ button.get-started {
     height:auto;
 }
 
-.select-category{
+#select-category1, #select-category2{
     margin: 10px;
     display: grid;
     gap: 6px;
+    height:0;
+    overflow: hidden;
+}
+
+#select-category1.active, #select-category2.active{
+    height: auto;
 }
 
 .nav-page-links{
@@ -233,7 +238,7 @@ button.get-started {
 
 .resource-segment{
     display: flex;
-    gap: 10px;
+    gap: 8px;
     align-items: center;
 }
 
@@ -246,9 +251,19 @@ button.get-started {
     width: 30px;
 }
 
+#program-button1, #program-button2{
+    background-color: inherit;
+    border:none;
+}
+
+.program-segment{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
 #home {
     background-image: url(icons/home.svg);
-  
 }
 
 #home:hover {
