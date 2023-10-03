@@ -136,9 +136,9 @@ button.get-started {
 
 #side-nav {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.075);
-    display: grid;
+    /* display: grid; */
     padding: 46px;
-    height: 85vh;
+    /* height: 85vh; */
 }
 
 #side-wrapper{
@@ -152,7 +152,7 @@ button.get-started {
 }
 
 #side-wrapper.active{
-    width : 250px;
+    width : 300px;
 
 }
 
@@ -181,6 +181,7 @@ button.get-started {
     color: white;
     font-size: 22px;
     font-weight: 400;
+    margin: 12px;
 }
 
 .nav-head > img{
@@ -202,6 +203,26 @@ button.get-started {
 
 #nav-close > img{
     width: 26px;
+}
+
+#side-nav li{
+    list-style-type: none;
+}
+
+/* .select-program{
+    margin: 10px;
+} */
+
+.select-category{
+    margin: 10px;
+    display: grid;
+    gap: 6px;
+}
+
+.nav-page-links{
+    display: grid;
+    margin: 16px;
+    gap: 10px;
 }
 
 #home {
