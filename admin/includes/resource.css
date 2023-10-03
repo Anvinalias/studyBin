@@ -71,7 +71,7 @@ input:focus:not(:placeholder-shown) {
 }
 
 input:not(:focus):placeholder-shown {
-    background-image: url(img/search.svg);
+    background-image: url(../img/search.svg);
     background-position: 10px center;
     background-repeat: no-repeat;
     background-size: 20px 20px;
@@ -93,7 +93,7 @@ input:not(:focus):placeholder-shown {
 }
 
 #alerts {
-    background-image: url(img/bell.svg);
+    background-image: url(../img/bell.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 24px 24px;
@@ -163,7 +163,7 @@ input:not(:focus):placeholder-shown {
 }
 
 .avatar {
-    background-image: url(img/profile.svg);
+    background-image: url(../img/profile.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -325,57 +325,57 @@ input:not(:focus):placeholder-shown {
 
 
 #home {
-    background-image: url(img/home.svg);
+    background-image: url(../img/home.svg);
 
 }
 
 #home:hover {
-    background-image: url(img/home-h.svg);
+    background-image: url(../img/home-h.svg);
 }
 
 #exchange {
-    background-image: url(img/exchange.svg);
+    background-image: url(../img/exchange.svg);
 
 }
 
 #exchange:hover {
-    background-image: url(img/exchange-h.svg);
+    background-image: url(../img/exchange-h.svg);
 }
 
 #resource {
-    background-image: url(img/resource.svg);
+    background-image: url(../img/resource.svg);
 
 }
 
 #resource:hover {
-    background-image: url(img/resource-h.svg);
+    background-image: url(../img/resource-h.svg);
 }
 
 #users {
-    background-image: url(img/users.svg);
+    background-image: url(../img/users.svg);
 
 }
 
 #users:hover {
-    background-image: url(img/users-h.svg);
+    background-image: url(../img/users-h.svg);
 }
 
 #settings {
-    background-image: url(img/settings.svg);
+    background-image: url(../img/settings.svg);
 
 }
 
 #settings:hover {
-    background-image: url(img/settings-h.svg);
+    background-image: url(../img/settings-h.svg);
 }
 
 #logout {
-    background-image: url(img/logout.svg);
+    background-image: url(../img/logout.svg);
 
 }
 
 #logout:hover {
-    background-image: url(img/logout-h.svg);
+    background-image: url(../img/logout-h.svg);
 }
 
 .upload {
@@ -389,9 +389,9 @@ input:not(:focus):placeholder-shown {
 
 
 .upload {
-    background-image: url(img/upload.svg);
+    background-image: url(../img/upload.svg);
 }
 
 .upload:hover {
-    background-image: url(img/upload-h.svg);
+    background-image: url(../img/upload-h.svg);
 }
