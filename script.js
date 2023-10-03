@@ -15,6 +15,15 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
+//   section: open and close resource links in navigation
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("resource-button").addEventListener("click", function() {
+        document.getElementById("select-program").classList.toggle("active");
+    });
+
+  });
+
 // section: goto a certain section of the page
 document.addEventListener('DOMContentLoaded', function () {
     const scrollButton = document.getElementById('arrow-icon');
