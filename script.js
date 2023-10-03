@@ -16,6 +16,11 @@ document.addEventListener("DOMContentLoaded", function () {
     //close navigation on close button click
     document.getElementById("nav-close").addEventListener("click", function () {
         document.getElementById("side-wrapper").classList.remove("active");
+        
+        // close resource section when clicking close button 
+        document.getElementById("select-program").classList.toggle("active");
+        document.getElementById("select-category1").classList.remove("active");
+        document.getElementById("select-category2").classList.remove("active");
     });
 
     //   section: open and close resource and program links in side-navigation
