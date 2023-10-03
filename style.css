@@ -233,7 +233,7 @@ button.get-started {
 .nav-page-links{
     display: grid;
     margin: 16px;
-    gap: 8px;
+    gap: 16px;
 }
 
 .resource-segment{
@@ -578,7 +578,7 @@ input:-webkit-autofill {
     .resource-text,
     .click-text,
     .user-text {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .section-3-heading {

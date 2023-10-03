@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("side-wrapper").classList.remove("active");
         
         // close resource section when clicking close button 
-        document.getElementById("select-program").classList.toggle("active");
+        document.getElementById("select-program").classList.remove("active");
         document.getElementById("select-category1").classList.remove("active");
         document.getElementById("select-category2").classList.remove("active");
     });
