@@ -40,13 +40,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // open BCA segment 
-    document.getElementById("program-button2").addEventListener("click", function () {
-        document.getElementById("select-category2").classList.toggle("active");
-    });
+    // document.getElementById("program-button2").addEventListener("click", function () {
+    //     document.getElementById("select-category2").classList.toggle("active");
+    // });
 
     // section: goto a certain section of the page
     const scrollButton = document.getElementById('arrow-icon');
     scrollButton.addEventListener('click', function () {
+        console.log("click");
         const targetSection = document.getElementById('section-2');
         targetSection.scrollIntoView({ behavior: 'smooth' });
     });
