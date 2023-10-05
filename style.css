@@ -24,12 +24,19 @@ html{
 }
 
 /* Header styling */
+
+#header-wrapper{
+    background-color:#f6f7fb;
+}
+
 #header-container {
     background-color:#ffffff;
-    width: 100vw;
+    width: 98%;
     position: fixed;
     z-index: 1;
     top: 0;
+    border-radius: 20px;
+    margin: 1%;
 }
 
 #header-content {
@@ -533,6 +540,11 @@ input:-webkit-autofill {
 
     .site-name {
         font-size: 1.5rem;
+    }
+
+    #header-container{
+        margin: 2%;
+        width: 96%;
     }
 
     .section-1-heading {
