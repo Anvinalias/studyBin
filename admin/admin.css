@@ -417,3 +417,14 @@ input:not(:focus):placeholder-shown {
 .upload:hover {
   background-image: url(img/upload-h.svg);
 }
+
+@media (max-width: 930px){
+
+  .side-nav{
+    display:none;
+  }
+
+  .approve-head {
+    justify-content: space-around;
+  }
+}
