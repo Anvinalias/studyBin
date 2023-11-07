@@ -124,16 +124,6 @@ button.get-started {
 }
 
 /* side nav */
-  
-.nav-overlay {
-    background-color: inherit;
-    border: 0;
-    margin: .5rem;
-}
-
-.menubar {
-    min-height: 2.5rem;
-}
 
 .divider {
     background-color: rgb(64, 64, 74);
