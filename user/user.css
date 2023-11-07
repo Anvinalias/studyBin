@@ -404,3 +404,34 @@ input:not(:focus):placeholder-shown {
 .profile:hover {
   background-image: url(img/admin-h.svg);
 }
+
+@media (max-width: 950px){
+  #updates{
+    display: none;
+  }
+  .main-content{
+    display:block;
+  }
+}
+
+@media (max-width:900px){
+
+  .side-wrapper{
+    width: 0;
+    overflow: hidden;
+  }
+  /* .side-nav{
+    overflow: hidden;
+    width: 0;
+  } */
+
+  .nav-overlay {
+    background-color: inherit ;
+    border: 0;
+    margin: .5rem;
+}
+
+.menubar {
+  min-height: 2.5rem;
+}
+}
