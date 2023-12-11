@@ -49,7 +49,7 @@
             <button>
                <span>Continue</span>
             </button>
-            <small class="login-text">Already have an account? <a href="../signin/index.html">Login</a></small>
+            <small class="login-text">Already have an account? <a href="../signin/index.php">Login</a></small>
          </form>
       </section>
    </main>

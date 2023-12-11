@@ -32,8 +32,8 @@
         <div class="nav-site-name">studyBin</div>
       </div>
       <div class="h-divider"></div>
-      <a href="../index.html" id="home">Home</a>
-      <a href="../user/user.html" id="resource">Resource</a>
+      <a href="../index.php" id="home">Home</a>
+      <a href="../user/user.php" id="resource">Resource</a>
       <a href="" id="exchange">Exchange</a>
       <a href="" id="community">Community</a>
       <div class="h-divider"></div>
@@ -80,7 +80,7 @@
               <div>Class Playlist</div>
             </div>
             <div class="folder" id="upload-links" >
-              <a href="../admin/admin.html" class="profile">admin</a>
+              <a href="../admin/admin.php" class="profile">admin</a>
               <div>(testing)</div>
             </div>
           </div>

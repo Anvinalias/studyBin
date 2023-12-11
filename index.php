@@ -31,12 +31,12 @@
                         <li class="contact"> <a href="#section-3">Contact</a></li>
                     </ul>
                     <div class="register">
-                        <a href="signin/index.html">
+                        <a href="signin/index.php">
                             <button type="button" class="login">
                                 Login
                             </button>
                         </a>
-                        <a href="signup/index.html">
+                        <a href="signup/index.php">
                             <button type="button" class="get-started">
                                 Get Started
                             </button>
@@ -60,10 +60,10 @@
                 <div class="divider"></div>
                 <div class="nav-page-links">
                     <div class="nav-link">
-                        <a href="index.html" id="home">Home</a>
+                        <a href="index.php" id="home">Home</a>
                     </div>
                     <div id="resource-segment" class="nav-link">
-                        <a href="user/user.html" id="file">Resource</a>
+                        <a href="user/user.php" id="file">Resource</a>
                         <button id="resource-button">
                             <img src="icons/arrow-h.svg" alt="arrow icon">
                         </button>

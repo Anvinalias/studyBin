@@ -31,8 +31,8 @@
                 <div class="nav-site-name">studyBin</div>
             </div>
             <div class="h-divider"></div>
-            <a href="../admin.html" id="home">Home</a>
-            <a href="../includes/resource.html" id="resource">Resource</a>
+            <a href="../admin.php" id="home">Home</a>
+            <a href="../includes/resource.php" id="resource">Resource</a>
             <a href="" id="users">Users</a>
             <a href="" id="exchange">Exchange</a>
             <div class="h-divider"></div>
