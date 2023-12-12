@@ -42,7 +42,7 @@
       <a href="" id="exchange">Exchange</a>
       <div class="h-divider"></div>
       <a href="" id="settings">Settings</a>
-      <a href="" id="logout">Logout</a>
+      <a href="signin/logout.php" id="logout">Logout</a>
     </div>
     <div class="main-content">
       <div id="approves">
