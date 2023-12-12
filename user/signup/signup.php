@@ -1,25 +1,26 @@
 <?php session_start();
 require_once('../../includes/config.php');
-//Code for Registration 
-if(isset($_POST['submit']))
-{
-    $username=$_POST['username'];
-    $email=$_POST['email'];
-    $password=$_POST['password'];
-$sql=mysqli_query($con,"select id from users where email='$email'");
-$row=mysqli_num_rows($sql);
-if($row>0)
-{
-    echo "<script>alert('Email id already exist with another account. Please try with other email id');</script>";
-} else{
-    $msg=mysqli_query($con,"insert into users(username,email,password) values('$username','$email','$password')");
 
-if($msg)
-{
-    echo "<script>alert('Registered successfully');</script>";
-    echo "<script type='text/javascript'> document.location = '../signin/signin.php'; </script>";
-}
-}
+//Code for Registration 
+if (isset($_POST['submit'])) {
+  $username = $_POST['username'];
+  $email = $_POST['email'];
+  $password = $_POST['password'];
+  $dec_password = md5($password);
+
+
+  $sql = mysqli_query($con, "SELECT user_id FROM users WHERE email='$email'");
+  $row = mysqli_num_rows($sql);
+  if ($row > 0) {
+    echo "<script>alert('Email id already exist with another account. Please try with other email id');</script>";
+  } else {
+    $msg = mysqli_query($con, "INSERT INTO users(username,email,password) VALUES('$username','$email','$dec_password')");
+
+    if ($msg) {
+      echo "<script>alert('Registered successfully');</script>";
+      echo "<script type='text/javascript'> document.location = '../signin/signin.php'; </script>";
+    }
+  }
 }
 ?>
 <!DOCTYPE html>
