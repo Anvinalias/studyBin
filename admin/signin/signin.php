@@ -42,7 +42,7 @@ exit();
 <body>
    <main>
       <section class="media-container">
-         <img class="vector" src="img//4354884.svg" alt="vector drawing" />
+         <img class="vector" src="../img/4354884.svg" alt="vector drawing" />
       </section>
       <section class="form-container">
          <h1>Admin Login</h1>
@@ -56,7 +56,7 @@ exit();
    </div>
    <div class="input-group">
       <div class="error hide">Password is not strong enough</div>
-      <label for="password"><img class="lock" src="img/lock.svg" alt="lock" /></label>
+      <label for="password"><img class="lock" src="../img/lock.svg" alt="lock" /></label>
       <input id="password" type="password" placeholder="Password" name="password" required />
    </div>
    <button name="login" type="submit">
