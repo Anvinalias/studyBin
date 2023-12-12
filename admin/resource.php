@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="rejectport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/icons/logo.svg">
+    <link rel="icon" href="/img/logo.svg">
     <link rel="stylesheet" href="resource.css">
     <title>studyBin</title>
 </head>
@@ -32,7 +32,7 @@
             </div>
             <div class="h-divider"></div>
             <a href="../admin.php" id="home">Home</a>
-            <a href="../includes/resource.php" id="resource">Resource</a>
+            <a href="../resource.php" id="resource">Resource</a>
             <a href="" id="users">Users</a>
             <a href="" id="exchange">Exchange</a>
             <div class="h-divider"></div>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>studyBin</title>
-    <link rel="icon" href="/icons/logo.svg">
+    <link rel="icon" href="/img/logo.svg">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -16,11 +16,11 @@
                 <div class="nav-logo">
                     <div id="side-button">
                         <button class="nav-overlay" type="button">
-                            <img class="menubar" src="./icons/menu.svg" alt="menu-nav">
+                            <img class="menubar" src="./img/menu.svg" alt="menu-nav">
                         </button>
                     </div>
                     <div class="site-logo-name">
-                        <img src="icons/logo.svg" alt="logo">
+                        <img src="img/logo.svg" alt="logo">
                         <div class="site-name">studyBin</div>
                     </div>
                 </div>
@@ -41,7 +41,7 @@
                                User Login
                             </button>
                         </a>
-                        <a href="signup/index.php">
+                        <a href="user/signup/signup.php">
                             <button type="button" class="get-started">
                                 Get Started
                             </button>
@@ -55,11 +55,11 @@
             <nav id="side-nav">
                 <header id="side-nav-head">
                     <div class="nav-head">
-                        <img src="icons/logo-h.svg" alt="logo">
+                        <img src="img/logo-h.svg" alt="logo">
                         <div class="nav-site-name">studyBin</div>
                     </div>
                     <button type="button" id="nav-close">
-                        <img src="icons/cross.svg">
+                        <img src="img/cross.svg">
                     </button>
                 </header>
                 <div class="divider"></div>
@@ -70,14 +70,14 @@
                     <div id="resource-segment" class="nav-link">
                         <a href="user/user.php" id="file">Resource</a>
                         <button id="resource-button">
-                            <img src="icons/arrow-h.svg" alt="arrow icon">
+                            <img src="img/arrow-h.svg" alt="arrow icon">
                         </button>
                     </div>
                     <ul id="select-program">
                         <li class="program-segment">
                             <a href="">BSC</a>
                             <button id="program-button1">
-                                <img src="icons/arrow-h.svg" alt="arrow icon">
+                                <img src="img/arrow-h.svg" alt="arrow icon">
                             </button>
                         </li>
                         <ul id="select-category1">
@@ -92,7 +92,7 @@
                         <!-- <li class="program-segment">
                             <a href="">BCA</a>
                             <button id="program-button2">
-                                <img src="icons/arrow-h.svg" alt="arrow icon">
+                                <img src="img/arrow-h.svg" alt="arrow icon">
                             </button>
                         </li>
                         <ul id="select-category2">
@@ -142,7 +142,7 @@
                     </div>
                 </div>
                 <button id="arrow-icon">
-                    <img src="icons/arrow.svg" alt="arrow icon">
+                    <img src="img/arrow.svg" alt="arrow icon">
                 </button>
             </section>
             <section id="section-2">
@@ -158,21 +158,21 @@
                     <li>
                         <span class="resource-count">24</span>
                         <div class="resource-description">
-                            <!-- <img src="icons/resource.svg" alt="a document icon" class="resource-logo"> -->
+                            <!-- <img src="img/resource.svg" alt="a document icon" class="resource-logo"> -->
                             <span class="resource-text">Resources</span>
                         </div>
                     </li>
                     <li>
                         <span class="click-count">87</span>
                         <div class="click-description">
-                            <!-- <img src="icons/click.svg" alt="a hand icon" class="click-logo"> -->
+                            <!-- <img src="img/click.svg" alt="a hand icon" class="click-logo"> -->
                             <span class="click-text">Clicks</span>
                         </div>
                     </li>
                     <li>
                         <span class="user-count">43</span>
                         <div class="user-description">
-                            <!-- <img src="icons/users.svg" alt="an user icon" class="user-logo"> -->
+                            <!-- <img src="img/users.svg" alt="an user icon" class="user-logo"> -->
                             <span class="user-text">Users</span>
                         </div>
                     </li>

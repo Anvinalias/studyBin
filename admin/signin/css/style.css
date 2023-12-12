@@ -12,7 +12,7 @@ body {
    height: calc(100vh - var(--vh-offset, 0px));
    font-family: "Manrope", sans-serif;
    min-height: max(calc(100vh - var(--vh-offset, 0px)), 620px);
-   background: url(../images/blob-bg.svg) no-repeat;
+   background: url(../img/blob-bg.svg) no-repeat;
    background-size: cover;
 }
 
@@ -256,7 +256,7 @@ button {
    }
 
    body, body::before {
-      background: url(../images/blob-lg.svg) no-repeat;
+      background: url(../img/blob-lg.svg) no-repeat;
       background-size: cover;
    }
 

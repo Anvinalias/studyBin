@@ -264,57 +264,57 @@ button.get-started {
 }
 
 #home {
-    background-image: url(icons/home.svg);
+    background-image: url(img/home.svg);
 }
 
 #home:hover {
-    background-image: url(icons/home-h.svg);
+    background-image: url(img/home-h.svg);
 }
 
 #exchange {
-    background-image: url(icons/exchange.svg);
+    background-image: url(img/exchange.svg);
 
 }
 
 #exchange:hover {
-    background-image: url(icons/exchange-h.svg);
+    background-image: url(img/exchange-h.svg);
 }
 
 #file {
-    background-image: url(icons/file.svg);
+    background-image: url(img/file.svg);
 
 }
 
 #file:hover {
-    background-image: url(icons/file-h.svg);
+    background-image: url(img/file-h.svg);
 }
 
 
 #community {
-    background-image: url(icons/community.svg);
+    background-image: url(img/community.svg);
 
 }
 
 #community:hover {
-    background-image: url(icons/community-h.svg);
+    background-image: url(img/community-h.svg);
 }
 
 #settings {
-    background-image: url(icons/settings.svg);
+    background-image: url(img/settings.svg);
 
 }
 
 #settings:hover {
-    background-image: url(icons/settings-h.svg);
+    background-image: url(img/settings-h.svg);
 }
 
 #logout {
-    background-image: url(icons/logout.svg);
+    background-image: url(img/logout.svg);
 
 }
 
 #logout:hover {
-    background-image: url(icons/logout-h.svg);
+    background-image: url(img/logout-h.svg);
 }
 
 /* Section 1 */
