@@ -19,7 +19,7 @@
          <img class="vector" src="images/4354884.svg" alt="vector drawing" />
       </section>
       <section class="form-container">
-         <h1>Sign in</h1>
+         <h1>Admin Login</h1>
          <form spellcheck="false" autocomplete="off">
             <div class="form-inputs">
                <div class="input-group">

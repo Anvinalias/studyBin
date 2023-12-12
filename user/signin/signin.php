@@ -19,13 +19,13 @@
          <img class="vector" src="images/4354884.svg" alt="vector drawing" />
       </section>
       <section class="form-container">
-         <h1>Sign in</h1>
+         <h1>Admin Login</h1>
          <form spellcheck="false" autocomplete="off">
             <div class="form-inputs">
                <div class="input-group">
-                  <div class="error hide">Name cannot be empty</div>
-                  <label for="name"><i class="fa-regular fa-user"></i></label>
-                  <input id="name" type="text" name="name" placeholder="Username" required />
+                  <div class="error hide">Email cannot be empty</div>
+                  <label for="Email"><i class="fa-regular fa-user"></i></label>
+                  <input id="name" type="email" name="email" placeholder="Email" required />
                </div>
             </div>
             <div class="input-group">

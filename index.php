@@ -31,9 +31,14 @@
                         <li class="contact"> <a href="#section-3">Contact</a></li>
                     </ul>
                     <div class="register">
-                        <a href="user/signin/sign.php">
+                    <a href="admin/signin/signin.php">
                             <button type="button" class="login">
-                                Login
+                               Admin Login
+                            </button>
+                        </a>
+                        <a href="user/signin/signin.php">
+                            <button type="button" class="login">
+                               User Login
                             </button>
                         </a>
                         <a href="signup/index.php">
