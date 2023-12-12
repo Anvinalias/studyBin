@@ -31,7 +31,7 @@
                         <li class="contact"> <a href="#section-3">Contact</a></li>
                     </ul>
                     <div class="register">
-                        <a href="signin/index.php">
+                        <a href="user/signin/sign.php">
                             <button type="button" class="login">
                                 Login
                             </button>
