@@ -1,3 +1,23 @@
+<?php session_start();
+include_once('../../includes/config.php');
+// Code for login 
+if (isset($_POST['login'])) {
+    $password = $_POST['password'];
+    $dec_password = md5($password);
+    $useremail = $_POST['email'];
+    $ret = mysqli_query($con, "SELECT user_id, username FROM users WHERE email='$useremail' and password='$dec_password'");
+    $num = mysqli_fetch_array($ret);
+    if ($num > 0) {
+
+        $_SESSION['id'] = $num['user_id'];
+        $_SESSION['name'] = $num['username'];
+        header("location:../user.php");
+    } else {
+        echo "<script>alert('Invalid username or password');</script>";
+    }
+}
+?>   
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,8 +39,8 @@
          <img class="vector" src="../img/4354884.svg" alt="vector drawing" />
       </section>
       <section class="form-container">
-         <h1>Admin Login</h1>
-         <form spellcheck="false" autocomplete="off">
+         <h1>User Login</h1>
+         <form method="post">
             <div class="form-inputs">
                <div class="input-group">
                   <div class="error hide">Email cannot be empty</div>
@@ -34,7 +54,7 @@
                <input id="password" type="password" placeholder="Password" name="password" required />
             </div>
             </div>
-            <button>
+            <button name="login" type="submit">
                <span>Continue</span>
             </button>
          </form>

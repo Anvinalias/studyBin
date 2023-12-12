@@ -38,7 +38,7 @@
       <a href="" id="community">Community</a>
       <div class="h-divider"></div>
       <a href="" id="settings">Settings</a>
-      <a href="" id="logout">Logout</a>
+      <a href="signin/logout.php" id="logout">Logout</a>
     </div>
     <div class="main-content">
       <div class="section-1">
@@ -78,10 +78,6 @@
             <div class="folder">
               <img src="img/folder.svg" alt="folder icon">
               <div>Class Playlist</div>
-            </div>
-            <div class="folder" id="upload-links" >
-              <a href="../admin/admin.php" class="profile">admin</a>
-              <div>(testing)</div>
             </div>
           </div>
         </div>
