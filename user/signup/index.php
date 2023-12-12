@@ -1,3 +1,30 @@
+<?php session_start();
+require_once('includes/config.php');
+
+//Code for Registration 
+if(isset($_POST['submit']))
+{
+    $fname=$_POST['firstname'];
+    $lname=$_POST['lastname'];
+    $email=$_POST['email'];
+    $password=$_POST['password'];
+    $contact=$_POST['contact'];
+$sql=mysqli_query($con,"select id from users where email='$email'");
+$row=mysqli_num_rows($sql);
+if($row>0)
+{
+    echo "<script>alert('Email id already exist with another account. Please try with other email id');</script>";
+} else{
+    $msg=mysqli_query($con,"insert into users(fname,lname,email,password,contactno) values('$fname','$lname','$email','$password','$contact')");
+
+if($msg)
+{
+    echo "<script>alert('Registered successfully');</script>";
+    echo "<script type='text/javascript'> document.location = 'login.php'; </script>";
+}
+}
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
