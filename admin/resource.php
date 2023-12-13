@@ -5,40 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="rejectport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/img/logo.svg">
+    <link rel="icon" href="./img/logo-h.svg">
     <link rel="stylesheet" href="resource.css">
     <title>studyBin</title>
 </head>
 
 <body>
     <div class="page-grid">
-        <div class="top-nav">
-            <div class="top-nav-container">
-                <div class="top-nav-avatar">
-                    <div class="avatar"></div>
-                    <div class="admin">admin</div>
-                </div>
-                <div class="top-nav-options">
-                    <input type="text" id="search-bar" placeholder=" "></input>
-                    <div class="divider"></div>
-                    <div id="alerts"></div>
-                </div>
-            </div>
-        </div>
-        <div class="side-nav">
-            <div class="nav-head">
-                <img src="../img/logo-h.svg" alt="logo">
-                <div class="nav-site-name">studyBin</div>
-            </div>
-            <div class="h-divider"></div>
-            <a href="../admin.php" id="home">Home</a>
-            <a href="../resource.php" id="resource">Resource</a>
-            <a href="" id="users">Users</a>
-            <a href="" id="exchange">Exchange</a>
-            <div class="h-divider"></div>
-            <a href="" id="settings">Settings</a>
-            <a href="" id="logout">Logout</a>
-        </div>
+    <?php include_once('includes/top-nav.php'); ?>
+    <?php include_once('includes/side-nav.php'); ?>
         <div class="main-content">
             <div class="section-1">
                 <h1 class="program">Bsc Computer Science</h1>
