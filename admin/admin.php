@@ -19,7 +19,7 @@
         <div class="approve-head">
           <div class="section-title">Approve</div>
           <div class="upload-links">
-            <a href="" class="upload">Upload</a>
+            <a href="../../../studyBin/admin/upload.php" class="upload">Upload</a>
           </div>
         </div>
         <div class="approve">

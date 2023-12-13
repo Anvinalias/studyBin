@@ -21,7 +21,7 @@
           <div class="resource-head">
             <div class="section-title">Resource</div>
             <div class="upload-links">
-              <a href="" class="upload">Upload</a>
+              <a href="../../studyBin/user/upload.php" class="upload">Upload</a>
             </div>
           </div>
           <div id="resource-folder">

@@ -2,7 +2,7 @@
 session_start();
 include_once('../includes/config.php');
 
-if (strlen($_SESSION['adminid']) == 0) {
+if (strlen($_SESSION['id']) == 0) {
     header('location:logout.php');
 } else {
     // Code for Event Creation
@@ -39,7 +39,7 @@ if (strlen($_SESSION['adminid']) == 0) {
 <head>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="../includes/styles.css" rel="stylesheet" />
-        <link rel="stylesheet" href="admin.css">
+        <link rel="stylesheet" href="user.css">
 
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
