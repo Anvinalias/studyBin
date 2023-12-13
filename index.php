@@ -89,21 +89,6 @@
                             <li><a href="">Text Books</a></li>
                             <li><a href="">Playlist</a></li>
                         </ul>
-                        <!-- <li class="program-segment">
-                            <a href="">BCA</a>
-                            <button id="program-button2">
-                                <img src="img/arrow-h.svg" alt="arrow icon">
-                            </button>
-                        </li>
-                        <ul id="select-category2">
-                            <li><a href="">Syllabus</a></li>
-                            <li><a href="">Notes</a></li>
-                            <li><a href="">Que Papers</a></li>
-                            <li><a href="">IMP Topics</a></li>
-                            <li><a href="">Lab Records</a></li>
-                            <li><a href="">Text Books</a></li>
-                            <li><a href="">Playlist</a></li>
-                        </ul> -->
                     </ul>
                     <div class="nav-link">
                         <a href="" id="exchange">Exchange</a>

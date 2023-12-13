@@ -4,7 +4,7 @@
         <div class="nav-site-name">studyBin</div>
       </div>
       <div class="h-divider"></div>
-      <a href="../../../studyBin/admin/admin.php" id="home">Home</a>
+      <a href="../../../studyBin/admin/admin.pph" id="home">Home</a>
       <a href="../../../studyBin/admin/resource.php" id="resource">Resource</a>
       <a href="../../../studyBin/admin/manage-users.php" id="users">Users</a>
       <a href="" id="exchange">Request</a>

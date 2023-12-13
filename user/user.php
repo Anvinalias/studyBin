@@ -16,7 +16,6 @@
     <div class="top-nav">
       <div class="top-nav-container">
         <div class="top-nav-avatar">
-          <div class="avatar"></div>
           <div class="username">username</div>
         </div>
         <div class="top-nav-options">
@@ -32,10 +31,10 @@
         <div class="nav-site-name">studyBin</div>
       </div>
       <div class="h-divider"></div>
-      <a href="../index.php" id="home">Home</a>
-      <a href="../user/user.php" id="resource">Resource</a>
-      <a href="" id="exchange">Exchange</a>
-      <a href="" id="community">Community</a>
+      <a href="../user/user.php" id="home">Home</a>
+      <a href="" id="exchange">Request</a>
+      <a href="" id="resource">Upload</a>
+      <a href="https://chat.whatsapp.com/LQjDeR9h4zwLuyjid3DOFk" id="community">Community</a>
       <div class="h-divider"></div>
       <a href="" id="settings">Settings</a>
       <a href="signin/logout.php" id="logout">Logout</a>
@@ -85,7 +84,6 @@
       <div id="updates">
         <div class="section-title">Latest</div>
         <div id="latest">
-          <div class="latest-image" style="background-image: url(img/)"></div>
           <div>
             <h3>@user1</h3>
             <p>Title: Computer Security</p>
@@ -94,7 +92,6 @@
             </p>
           </div>
           <div class="h-divider"></div>
-          <div class="latest-image" style="background-image: url(img/)"></div>
           <div>
             <h3>@user2</h3>
             <p>Title: Network Fundamentals</p>
@@ -103,7 +100,6 @@
             </p>
           </div>
           <div class="h-divider"></div>
-          <div class="latest-image" style="background-image: url(img/)"></div>
           <div>
             <h3>@user3</h3>
             <p>Title: Microprocessor</p>

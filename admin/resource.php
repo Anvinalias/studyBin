@@ -51,31 +51,31 @@
                     </div>
                     <div id="resource-folder">
                         <div class="folder">
-                            <img src="../img/folder.svg" alt="folder icon">
+                            <img src="./img/folder.svg" alt="folder icon">
                             <div>Syllabus</div>
                         </div>
                         <div class="folder">
-                            <img src="../img/folder.svg" alt="folder icon">
+                            <img src="./img/folder.svg" alt="folder icon">
                             <div>Lecture Notes</div>
                         </div>
                         <div class="folder">
-                            <img src="../img/folder.svg" alt="folder icon">
+                            <img src="./img/folder.svg" alt="folder icon">
                             <div>Question Papers</div>
                         </div>
                         <div class="folder">
-                            <img src="../img/folder.svg" alt="folder icon">
+                            <img src="./img/folder.svg" alt="folder icon">
                             <div>Important Topics</div>
                         </div>
                         <div class="folder">
-                            <img src="../img/folder.svg" alt="folder icon">
+                            <img src="./img/folder.svg" alt="folder icon">
                             <div>Lab Records</div>
                         </div>
                         <div class="folder">
-                            <img src="../img/folder.svg" alt="folder icon">
+                            <img src="./img/folder.svg" alt="folder icon">
                             <div>Text Books</div>
                         </div>
                         <div class="folder">
-                            <img src="../img/folder.svg" alt="folder icon">
+                            <img src="./img/folder.svg" alt="folder icon">
                             <div>Class Playlist</div>
                         </div>
                     </div>
@@ -84,7 +84,6 @@
             <div id="updates">
                 <div class="section-title">Latest</div>
                 <div id="latest">
-                    <div class="latest-image" style="background-image: url(../img/)"></div>
                     <div>
                         <h3>@user1</h3>
                         <p>Title: Computer Security</p>
@@ -93,7 +92,6 @@
                         </p>
                     </div>
                     <div class="h-divider"></div>
-                    <div class="latest-image" style="background-image: url(../img/)"></div>
                     <div>
                         <h3>@user2</h3>
                         <p>Title: Network Fundamentals</p>
@@ -102,7 +100,6 @@
                         </p>
                     </div>
                     <div class="h-divider"></div>
-                    <div class="latest-image" style="background-image: url(../img/)"></div>
                     <div>
                         <h3>@user3</h3>
                         <p>Title: Microprocessor</p>
