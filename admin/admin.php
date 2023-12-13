@@ -72,7 +72,6 @@
       <div id="news">
         <div class="section-title">Requests</div>
         <div id="request">
-          <div class="request-image" style="background-image: url(img/)"></div>
           <div>
             <h3>@user1</h3>
             <p>Title: 8086 MP</p>
@@ -82,7 +81,6 @@
             </p>
           </div>
           <div class="h-divider"></div>
-          <div class="request-image" style="background-image: url(img/)"></div>
           <div>
             <h3>@user2</h3>
             <p>Title: 2022</p>
