@@ -10,35 +10,10 @@
   <title>studyBin</title>
 
 </head>
-
 <body>
   <div class="page-grid">
-    <div class="top-nav">
-      <div class="top-nav-container">
-        <div class="top-nav-avatar">
-          <div class="username">username</div>
-        </div>
-        <div class="top-nav-options">
-          <input type="text" id="search-bar" placeholder=" "></input>
-          <div class="divider"></div>
-          <div id="alerts"></div>
-        </div>
-      </div>
-    </div>
-    <div class="side-nav">
-      <div class="nav-head">
-        <img src="img/logo-h.svg" alt="logo">
-        <div class="nav-site-name">studyBin</div>
-      </div>
-      <div class="h-divider"></div>
-      <a href="../user/user.php" id="home">Home</a>
-      <a href="" id="exchange">Request</a>
-      <a href="" id="resource">Upload</a>
-      <a href="https://chat.whatsapp.com/LQjDeR9h4zwLuyjid3DOFk" id="community">Community</a>
-      <div class="h-divider"></div>
-      <a href="" id="settings">Settings</a>
-      <a href="signin/logout.php" id="logout">Logout</a>
-    </div>
+  <?php include_once('includes/top-nav.php'); ?>
+  <?php include_once('includes/side-nav.php'); ?>
     <div class="main-content">
       <div class="section-1">
         <h1 class="program">Bsc Computer Science</h1>
