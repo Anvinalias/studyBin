@@ -16,7 +16,7 @@ if (strlen($_SESSION['adminid']) == 0) {
         $course = $_POST['course'];
         $semester = $_POST['semester'];
         $year = $_POST['year'];
-        $keywords = $_POST['keywords'];
+        $keywords = $_POST['keywords'];       
 
         
         // Perform validation and error handling as needed

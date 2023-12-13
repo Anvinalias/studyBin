@@ -9,6 +9,6 @@
     <a href="../../../studyBin/user/upload.php" id="resource">Upload</a>
     <a href="https://chat.whatsapp.com/LQjDeR9h4zwLuyjid3DOFk" id="community">Community</a>
     <div class="h-divider"></div>
-    <a href="" id="settings">Settings</a>
+    <a href="../../../studyBin/user/profile.php" id="settings">Profile</a>
     <a href="signin/logout.php" id="logout">Logout</a>
   </div>
