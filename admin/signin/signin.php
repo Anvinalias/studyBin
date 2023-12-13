@@ -3,7 +3,7 @@ include_once('../../includes/config.php');
 // Code for login 
 if(isset($_POST['login']))
 {
-  $adminusername=$_POST['name'];
+  $adminusername=$_POST['username'];
   $pass=md5($_POST['password']);
 $ret=mysqli_query($con,"SELECT * FROM users WHERE username='$adminusername' and password='$pass' and role = 'admin'");
 $num=mysqli_fetch_array($ret);
@@ -11,7 +11,7 @@ if($num>0)
 {
 $extra="../admin.php";
 $_SESSION['login']=$_POST['username'];
-$_SESSION['adminid']=$num['id'];
+$_SESSION['adminid']=$num['user_id'];
 echo "<script>window.location.href='".$extra."'</script>";
 exit();
 }
@@ -51,7 +51,7 @@ exit();
       <div class="input-group">
          <div class="error hide">Name cannot be empty</div>
          <label for="name"><i class="fa-regular fa-user"></i></label>
-         <input id="name" type="text" name="name" placeholder="Username" required />
+         <input id="name" type="text" name="username" placeholder="Username" required />
       </div>
    </div>
    <div class="input-group">
