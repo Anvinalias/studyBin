@@ -54,6 +54,7 @@ echo "<script>alert('Request deleted');</script>";
                                         <th>Requested by</th>
                                         <th>Status</th>
                                         <th>Created At</th>
+                                        <th>Details<th>
                                     </tr>
                                 </thead>
                                     
@@ -68,12 +69,13 @@ echo "<script>alert('Request deleted');</script>";
                                         echo "<td>{$row['category']}</td>";
                                         echo "<td>{$row['course']}</td>";
                                         echo "<td>{$row['semester']}</td>";
-                                        echo "<td>{$row['user_id']}</td>";
+                                        echo "<td>{$row['username']}</td>";
                                         echo "<td>{$row['status']}</td>";
                                         echo "<td>{$row['created_at']}</td>";
+                                        echo "<td>{$row['details']}</td>";
                                         echo "<td>";
                                         echo "<a href='user-profile.php?uid={$row['id']}'><i class='fas fa-edit'></i></a>";
-                                        echo "<a href='manage-users.php?id={$row['id']}' onClick=\"return confirm('Do you really want to delete');\"><i class='fa fa-trash' aria-hidden='true'></i></a>";
+                                        echo "<a href='manage-users.php?user_id={$row['id']}' onClick=\"return confirm('Do you really want to delete');\"><i class='fa fa-trash' aria-hidden='true'></i></a>";
                                         echo "</td>";
                                         echo "</tr>";
                                         $cnt++;

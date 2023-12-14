@@ -6,23 +6,31 @@ if (strlen($_SESSION['id']) == 0) {
     header('location:logout.php');
 } else {
     // Code for Event Creation
+
+    $userid = $_SESSION['id'];
+    $query = mysqli_query($con, "select * from users where user_id='$userid'");
+    $result = mysqli_fetch_array($query);
+    $username = $result['username'];
+
+
     if (isset($_POST['request'])) {
         $topic = $_POST['topic'];
         $category = $_POST['category'];
         $program = $_POST['program'];
         $course = $_POST['course'];
         $semester = $_POST['semester'];
+        $username = $POST['username'];
         $details = $_POST['details'];
 
         
         // Perform validation and error handling as needed
 
-        $query = mysqli_query($con, "INSERT INTO resources (topic, category, program, course, semester,details)
-                                      VALUES ('$topic','$category', '$program', '$course', '$semester', '$details')");
+        $query = mysqli_query($con, "INSERT INTO user_requests (username, user_id,topic, category, program, course, semester,details)
+                                      VALUES ('$username', '$userid','$topic','$category', '$program', '$course', '$semester', '$details')");
 
         if ($query) {
             echo "<script>alert('Request successful');</script>";
-            echo "<script type='text/javascript'> document.location = 'request.php'; </script>";
+            echo "<script type='text/javascript'> document.location = 'requests.php'; </script>";
         } else {
             echo "<script>alert('Error requesting');</script>";
         }
@@ -112,7 +120,6 @@ if (strlen($_SESSION['id']) == 0) {
             </main>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="../js/scripts.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
         <script src="../js/datatables-simple-demo.js"></script>

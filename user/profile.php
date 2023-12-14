@@ -34,7 +34,7 @@ while($result=mysqli_fetch_array($query))
 {?>
                         <h1 class="mt-4"><?php echo $result['username'];?>'s Profile</h1>
                         <div class="card mb-4">
-                     
+
                             <div class="card-body">
                                 <a href="edit-profile.php">Edit</a>
                                 <table class="table table-bordered">
