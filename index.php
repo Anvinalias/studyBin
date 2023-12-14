@@ -68,7 +68,7 @@
                         <a href="index.php" id="home">Home</a>
                     </div>
                     <div id="resource-segment" class="nav-link">
-                        <a href="user/user.php" id="file">Resource</a>
+                        <a href="../studyBin/user/user.php" id="file">Resource</a>
                         <button id="resource-button">
                             <img src="img/arrow-h.svg" alt="arrow icon">
                         </button>

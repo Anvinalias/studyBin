@@ -6,28 +6,25 @@ if (strlen($_SESSION['id']) == 0) {
     header('location:logout.php');
 } else {
     // Code for Event Creation
-    if (isset($_POST['upload'])) {
-        $title = $_POST['title'];
+    if (isset($_POST['request'])) {
         $topic = $_POST['topic'];
-        $details = $_POST['details'];
-        $file = $_POST['file'];
         $category = $_POST['category'];
         $program = $_POST['program'];
         $course = $_POST['course'];
         $semester = $_POST['semester'];
-        $keywords = $_POST['keywords'];
+        $details = $_POST['details'];
 
         
         // Perform validation and error handling as needed
 
-        $query = mysqli_query($con, "INSERT INTO resources (title, topic, details, file, category, program, course, semester,keywords)
-                                      VALUES ('$title', '$topic', '$details', '$file', '$category', '$program', '$course', '$semester', '$keywords')");
+        $query = mysqli_query($con, "INSERT INTO resources (topic, category, program, course, semester,details)
+                                      VALUES ('$topic','$category', '$program', '$course', '$semester', '$details')");
 
         if ($query) {
-            echo "<script>alert('Upload successful');</script>";
-            echo "<script type='text/javascript'> document.location = 'manage-resource'; </script>";
+            echo "<script>alert('Request successful');</script>";
+            echo "<script type='text/javascript'> document.location = 'request.php'; </script>";
         } else {
-            echo "<script>alert('Error uploading');</script>";
+            echo "<script>alert('Error requesting');</script>";
         }
     }
 }
@@ -58,20 +55,8 @@ if (strlen($_SESSION['id']) == 0) {
                     <form method="post">
     <div class="card-body">
         <div class="mb-3">
-            <label for="title" class="form-label">Title</label>
-            <input type="text" class="form-control" id="title" name="title" required>
-        </div>
-        <div class="mb-3">
             <label for="topic" class="form-label">Topic</label>
             <input type="text" class="form-control" id="topic" name="topic" required>
-        </div>
-        <div class="mb-3">
-            <label for="details" class="form-label">Details</label>
-            <textarea class="form-control" id="details" name="details" rows="3" required></textarea>
-        </div>
-        <div class="mb-3">
-            <label for="file" class="form-label">File</label>
-            <input type="file" class="form-control" id="file" name="file" required>
         </div>
         <div class="mb-3">
             <label for="category" class="form-label">Category</label>
@@ -113,14 +98,15 @@ if (strlen($_SESSION['id']) == 0) {
             </select>
         </div>
         <div class="mb-3">
-            <label for="keywords" class="form-label">Keywords</label>
-            <input type="text" class="form-control" id="keyboard" name="keyboard" required>
+            <label for="details" class="form-label">Details</label>
+            <textarea class="form-control" id="details" name="details" rows="3" required></textarea>
         </div>
         <div class="mb-3">
-            <button type="submit" class="btn btn-primary" name="upload">Upload</button>
+            <button type="submit" class="btn btn-primary" name="request">Request</button>
         </div>
     </div>
 </form>
+
                     </div>
                 </div>
             </main>

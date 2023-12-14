@@ -1,3 +1,9 @@
+<?php session_start();
+include_once('../includes/config.php');
+if (strlen($_SESSION['adminid']==0)) {
+  header('location:logout.php');
+  } ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
