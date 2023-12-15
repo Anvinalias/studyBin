@@ -19,7 +19,6 @@ if (strlen($_SESSION['id']) == 0) {
         $program = $_POST['program'];
         $course = $_POST['course'];
         $semester = $_POST['semester'];
-        $username = $POST['username'];
         $details = $_POST['details'];
 
         

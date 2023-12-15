@@ -1,11 +1,72 @@
 <?php
 session_start();
+include_once('includes/config.php');
+
+if (strlen($_SESSION['id']) == 0) {
+    header('location:logout.php');
+} else {
+    // Code for project Creation
+    if (isset($_POST['project'])) {
+        $user_id = $_SESSION['id'];
+        $project_name = $_POST['project_name'];
+        $description = $_POST['description'];
+        $status = $_POST['status'];
+        $keywords = $_POST['keywords'];
+
+        $file_name = $_FILES['file']['name'];
+        $file_size = $_FILES['file']['size'];
+        //tmp_name ---	A temporary address where the file is located before processing the upload request
+        $file_tmp = $_FILES['file']['tmp_name'];
+        $file_type = $_FILES['file']['type'];
+        $tmp = explode('.', $file_name);
+        $file_ext = end($tmp);
+        $extensions = "zip";
+
+        // Allow certain file formats
+
+        if ($file_ext === $extensios) {
+            echo "This extension isn't allowed , please choose a jpg,jpeg or png file.";
+            die();
+        } 
+        else {
+            //if error not occurs than this will run so we can make 
+            $error = false;
+            // if every things is okay than move pic to upload (file going to be sent,destination where file is saved)
+            move_uploaded_file($file_tmp,"upload/". $file_name);
+        }
+    }
+
+    if ($error === false) {
+        $query = mysqli_query($con, "INSERT INTO resources (title, topic, details, file, category, program, course, semester,keywords, uploaded_by)
+        VALUES ('$title', '$topic', '$details', '$file', '$category', '$program', '$course', '$semester', '$keywords', $username)");
+
+                if ($query) {
+                    echo "<script>alert('Resource upload successfully');</script>";
+                    echo "<script type='text/javascript'> document.location = 'project-uploads.php'; </script>";
+                } else {
+                    echo "<script>alert('Error creating Uploads');</script>";
+                }
+            } 
+        }
+?>
+
+
+
+
+
+<?php
+session_start();
 include_once('../includes/config.php');
 
 if (strlen($_SESSION['adminid']) == 0) {
     header('location:logout.php');
 } else {
     // Code for Event Creation
+
+    $userid = $_SESSION['id'];
+    $query = mysqli_query($con, "select * from users where user_id='$userid'");
+    $result = mysqli_fetch_array($query);
+    $username = $result['username'];
     if (isset($_POST['upload'])) {
         $title = $_POST['title'];
         $topic = $_POST['topic'];
@@ -15,14 +76,35 @@ if (strlen($_SESSION['adminid']) == 0) {
         $program = $_POST['program'];
         $course = $_POST['course'];
         $semester = $_POST['semester'];
-        $year = $_POST['year'];
-        $keywords = $_POST['keywords'];       
+        $keywords = $_POST['keywords'];    
+        
+        $file_name = $_FILES['file']['name'];
+        $file_size = $_FILES['file']['size'];
+        //tmp_name ---	A temporary address where the file is located before processing the upload request
+        $file_tmp = $_FILES['file']['tmp_name'];
+        $file_type = $_FILES['file']['type'];
+        $tmp = explode('.', $file_name);
+        $file_ext = end($tmp);
+        $extensions = "pdf";
+
+        // Allow certain file formats
+
+        if ($file_ext === $extensios) {
+            echo "This extension isn't allowed , please choose a pdf file.";
+            die();
+        } 
+        else {
+            //if error not occurs than this will run so we can make 
+            $error = false;
+            // if every things is okay than move pic to upload (file going to be sent,destination where file is saved)
+            move_uploaded_file($file_tmp,"../upload/". $file_name);
+        }
 
         
         // Perform validation and error handling as needed
 
-        $query = mysqli_query($con, "INSERT INTO resources (title, topic, details, file, category, program, course, semester,yearofstudy,keywords)
-                                      VALUES ('$title', '$topic', '$details', '$file', '$category', '$program', '$course', '$semester', '$year', '$keywords')");
+        $query = mysqli_query($con, "INSERT INTO resources (title, topic, details, file, category, program, course, semester,keywords, uploaded_by)
+                                      VALUES ('$title', '$topic', '$details', '$file', '$category', '$program', '$course', '$semester', '$keywords', $username)");
 
         if ($query) {
             echo "<script>alert('Upload successful');</script>";
