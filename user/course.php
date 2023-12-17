@@ -19,7 +19,7 @@
         <h1 class="program">Bsc Computer Science</h1>
         <div id="resources">
           <div class="resource-head">
-            <div class="section-title">Choose a Category</div>
+            <div class="section-title">Choose a Course</div>
             <div class="upload-links">
               <a href="../../studyBin/user/upload.php" class="upload">Upload</a>
             </div>
@@ -53,34 +53,6 @@
               <img src="img/folder.svg" alt="folder icon">
               <div>Class Playlist</div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div id="updates">
-        <div class="section-title">Latest</div>
-        <div id="latest">
-          <div>
-            <h3>@user1</h3>
-            <p>Title: Computer Security</p>
-            <p>Category: Lecture Notes
-              <a href="">More&nbsp;&rarr;</a>
-            </p>
-          </div>
-          <div class="h-divider"></div>
-          <div>
-            <h3>@user2</h3>
-            <p>Title: Network Fundamentals</p>
-            <p>Category: Question Paper
-              <a href="">More&nbsp;&rarr;</a>
-            </p>
-          </div>
-          <div class="h-divider"></div>
-          <div>
-            <h3>@user3</h3>
-            <p>Title: Microprocessor</p>
-            <p>Category: Lab Record
-              <a href="">More&nbsp;&rarr;</a>
-            </p>
           </div>
         </div>
       </div>
