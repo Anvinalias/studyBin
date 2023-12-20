@@ -1,9 +1,5 @@
 <?php
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 session_start();
 include_once('../includes/config.php');
 include_once('../includes/config.php');
@@ -108,10 +104,12 @@ if (isset($_POST['upload'])) {
                             <div class="mb-3">
                                 <label for="category" class="form-label">Category</label>
                                 <select id="category" name="category" class="form-control" required>
-                                    <option value="notes">Notes</option>
-                                    <option value="qp">Question Papers</option>
-                                    <option value="records">Lab Records</option>
+                                    <option value="notes">Note</option>
+                                    <option value="syllabus">Syllabus</option>
+                                    <option value="qp">Question Paper</option>
                                     <option value="summary">Summary</option>
+                                    <option value="records">Lab Record</option>
+                                    <option value="text">Text Book</option>
                                     <option value="impque">Important Questions</option>                    
 
                                 </select>
@@ -120,17 +118,6 @@ if (isset($_POST['upload'])) {
                                 <label for="program" class="form-label">Program</label>
                                 <select id="program" name="program" class="form-control" required>
                                     <option value="Program1">Bsc Computer Science</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <label for="course" class="form-label">Course</label>
-                                <select id="course" name="course" class="form-control" required>
-                                    <option value="cf">Computer Fundamentals</option>
-                                    <option value="maths1">Discrete Mathematics 1</option>
-                                    <option value="digital">Digital Fundamentals</option>
-                                    <option value="english1">Fine tune English</option>
-                                    <option value="c">Programming using C</option>
-                                    <!-- Add more options as needed -->
                                 </select>
                             </div>
                             <div class="mb-3">
@@ -143,6 +130,17 @@ if (isset($_POST['upload'])) {
                                     <option value="Semester2">Semester 5</option>
                                     <option value="Semester2">Semester 6</option>
 
+                                    <!-- Add more options as needed -->
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="course" class="form-label">Course</label>
+                                <select id="course" name="course" class="form-control" required>
+                                    <option value="cf">Computer Fundamentals</option>
+                                    <option value="maths1">Discrete Mathematics 1</option>
+                                    <option value="digital">Digital Fundamentals</option>
+                                    <option value="english1">Fine tune English</option>
+                                    <option value="c">Programming using C</option>
                                     <!-- Add more options as needed -->
                                 </select>
                             </div>
