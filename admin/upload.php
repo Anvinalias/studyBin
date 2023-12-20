@@ -26,7 +26,7 @@ if (isset($_POST['upload'])) {
 
     $upfile = $_FILES['file']['name'];
     $ext = pathinfo($upfile, PATHINFO_EXTENSION);
-    $validExt = array('pdf', 'txt', 'doc', 'docx', 'ppt', 'zip');
+    $validExt = array('pdf', 'txt', 'doc', 'docx', 'ppt', 'zip', 'jpg');
     if (empty($upfile)) {
         echo "<script>alert('Attach a file');</script>";
     } else if ($_FILES['file']['size'] <= 0) {
@@ -37,7 +37,7 @@ if (isset($_POST['upload'])) {
         $folder = "../upload/$category/$semester/$course/";
         $filename = pathinfo($upfile, PATHINFO_FILENAME);
         $fileext = strtolower(pathinfo($upfile, PATHINFO_EXTENSION));
-        $notefile = $filename . rand(0, 1000) . '.' . $fileext;
+        $notefile = $filename . 'R' . rand(0, 100) . '.' . $fileext;
 
         if (move_uploaded_file($_FILES['file']['tmp_name'], $folder . $notefile)) {
 
@@ -47,15 +47,15 @@ if (isset($_POST['upload'])) {
             if (!$stmt) {
                 die("Preparation failed: " . mysqli_error($con));
             }
-            
+
             $success = mysqli_stmt_execute($stmt);
-            
+
             if ($success) {
                 echo "<script> alert('File uploaded successfully'); window.location.href='upload.php';</script>";
             } else {
                 echo "<script> alert('Error while uploading: " . mysqli_error($con) . "'); </script>";
             }
-            
+
 
         }
     }
@@ -110,7 +110,7 @@ if (isset($_POST['upload'])) {
                                     <option value="summary">Summary</option>
                                     <option value="records">Lab Record</option>
                                     <option value="text">Text Book</option>
-                                    <option value="impque">Important Questions</option>                    
+                                    <option value="impque">Important Questions</option>
 
                                 </select>
                             </div>
@@ -122,28 +122,66 @@ if (isset($_POST['upload'])) {
                             </div>
                             <div class="mb-3">
                                 <label for="semester" class="form-label">Semester</label>
-                                <select id="semester" name="semester" class="form-control" required>
+                                <select id="semester" name="semester" class="form-control" onchange="updateCourses()"
+                                    required>
                                     <option value="Semester1">Semester 1</option>
                                     <option value="Semester2">Semester 2</option>
-                                    <option value="Semester2">Semester 3</option>
-                                    <option value="Semester2">Semester 4</option>
-                                    <option value="Semester2">Semester 5</option>
-                                    <option value="Semester2">Semester 6</option>
-
-                                    <!-- Add more options as needed -->
+                                    <option value="Semester3">Semester 3</option>
+                                    <option value="Semester4">Semester 4</option>
+                                    <option value="Semester5">Semester 5</option>
+                                    <option value="Semester6">Semester 6</option>
                                 </select>
                             </div>
+
                             <div class="mb-3">
                                 <label for="course" class="form-label">Course</label>
                                 <select id="course" name="course" class="form-control" required>
-                                    <option value="cf">Computer Fundamentals</option>
-                                    <option value="maths1">Discrete Mathematics 1</option>
-                                    <option value="digital">Digital Fundamentals</option>
-                                    <option value="english1">Fine tune English</option>
-                                    <option value="c">Programming using C</option>
-                                    <!-- Add more options as needed -->
+                                    <!-- Options will be dynamically populated based on the selected semester -->
                                 </select>
                             </div>
+
+                            <script>
+                                function updateCourses() {
+                                    // Get the selected semester value
+                                    var selectedSemester = document.getElementById("semester").value;
+
+                                    // Get the course select element
+                                    var courseSelect = document.getElementById("course");
+
+                                    // Clear existing options
+                                    courseSelect.innerHTML = "";
+
+                                    // Populate options based on the selected semester
+                                    switch (selectedSemester) {
+                                        case "Semester1":
+                                            addOption(courseSelect, "cf", "Computer Fundamentals");
+                                            addOption(courseSelect, "maths1", "Discrete Mathematics 1");
+                                            addOption(courseSelect, "digital", "Digital Fundamentals");
+                                            addOption(courseSelect, "english1", "Fine tune English");
+                                            addOption(courseSelect, "c", "Programming using C");
+                                            break;
+                                        case "Semester2":
+                                            addOption(courseSelect, "coa", "Computer Fundamentals13");
+                                            addOption(courseSelect, "maths2", "Discrete Mathematics 12");
+                                            addOption(courseSelect, "dc", "Digital Fundamentals2");
+                                            addOption(courseSelect, "english2", "Fine tune English2");
+                                            addOption(courseSelect, "cpp", "OOps cpp");
+                                            break;
+                                        // Add cases for other semesters
+                                    }
+                                }
+
+                                function addOption(selectElement, value, text) {
+                                    var option = document.createElement("option");
+                                    option.value = value;
+                                    option.text = text;
+                                    selectElement.add(option);
+                                }
+
+                                // Initial population of courses based on the default selected semester
+                                updateCourses();
+                            </script>
+
                             <div class="mb-3">
                                 <label for="keywords" class="form-label">Keywords</label>
                                 <input type="text" class="form-control" id="title" name="keywords" required>
