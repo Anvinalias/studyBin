@@ -1,4 +1,9 @@
 <?php
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 session_start();
 include_once('../includes/config.php');
 include_once('../includes/config.php');
@@ -15,7 +20,6 @@ $username = $result['username'];
 if (isset($_POST['upload'])) {
 
     $title = $_POST['title'];
-    $topic = $_POST['topic'];
     $details = $_POST['details'];
     $category = $_POST['category'];
     $program = $_POST['program'];
@@ -41,14 +45,22 @@ if (isset($_POST['upload'])) {
 
         if (move_uploaded_file($_FILES['file']['tmp_name'], $folder . $notefile)) {
 
-            $in = "INSERT INTO resources (title, topic, details, file, category, uploaded_by , program, course, semester,keywords,status) VALUES ('$title' , '$topic' , '$details' , '$notefile' , '$category', '$username' , '$program', '$course', '$semester', '$keywords', 'active')";
-            $out = mysqli_query($con , $in) or die(mysqli_error($con));
-            if ($out) {
-                echo "<script> alert('file uploaded successfully');
-                window.location.href='upload.php';</script>";
+            $in = "INSERT INTO resources (title, details, file, category, uploaded_by , program, course, semester,keywords,status) VALUES ('$title', '$details' , '$notefile' , '$category', '$username' , '$program', '$course', '$semester', '$keywords', 'active')";
+            $stmt = mysqli_prepare($con, $in);
+
+            if (!$stmt) {
+                die("Preparation failed: " . mysqli_error($con));
+            }
+            
+            $success = mysqli_stmt_execute($stmt);
+            
+            if ($success) {
+                echo "<script> alert('File uploaded successfully'); window.location.href='upload.php';</script>";
             } else {
                 echo "<script> alert('Error while uploading: " . mysqli_error($con) . "'); </script>";
             }
+            
+
         }
     }
 }
@@ -86,10 +98,6 @@ if (isset($_POST['upload'])) {
                                 <input type="text" class="form-control" id="title" name="title" required>
                             </div>
                             <div class="mb-3">
-                                <label for="topic" class="form-label">Topic</label>
-                                <input type="text" class="form-control" id="topic" name="topic" required>
-                            </div>
-                            <div class="mb-3">
                                 <label for="details" class="form-label">Details</label>
                                 <textarea class="form-control" id="details" name="details" rows="3" required></textarea>
                             </div>
@@ -100,10 +108,11 @@ if (isset($_POST['upload'])) {
                             <div class="mb-3">
                                 <label for="category" class="form-label">Category</label>
                                 <select id="category" name="category" class="form-control" required>
-                                    <option value="Category1">Lecture Notes</option>
-                                    <option value="Category2">Question Papers</option>
-                                    <option value="Category3">Lab Records</option>
-                                    <option value="Category4">Summary</option>
+                                    <option value="notes">Notes</option>
+                                    <option value="qp">Question Papers</option>
+                                    <option value="records">Lab Records</option>
+                                    <option value="summary">Summary</option>
+                                    <option value="impque">Important Questions</option>                    
 
                                 </select>
                             </div>
@@ -116,10 +125,11 @@ if (isset($_POST['upload'])) {
                             <div class="mb-3">
                                 <label for="course" class="form-label">Course</label>
                                 <select id="course" name="course" class="form-control" required>
-                                    <option value="Course1">Computer Fundamentals</option>
-                                    <option value="Course2">Discrete Mathematics 1</option>
-                                    <option value="Course3">Digital Fundamentals</option>
-                                    <option value="Course4">Fine tune English</option>
+                                    <option value="cf">Computer Fundamentals</option>
+                                    <option value="maths1">Discrete Mathematics 1</option>
+                                    <option value="digital">Digital Fundamentals</option>
+                                    <option value="english1">Fine tune English</option>
+                                    <option value="c">Programming using C</option>
                                     <!-- Add more options as needed -->
                                 </select>
                             </div>
