@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("resource-button").addEventListener("click", function () {
         document.getElementById("select-program").classList.toggle("active");
 
-        // close BSc and BCA section when clicking resource button 
+        // close BSc section when clicking resource button 
         document.getElementById("select-category1").classList.remove("active");
         document.getElementById("select-category2").classList.remove("active");
     });
@@ -38,11 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("program-button1").addEventListener("click", function () {
         document.getElementById("select-category1").classList.toggle("active");
     });
-
-    // open BCA segment 
-    // document.getElementById("program-button2").addEventListener("click", function () {
-    //     document.getElementById("select-category2").classList.toggle("active");
-    // });
 
     // section: goto a certain section of the page
     const scrollButton = document.getElementById('arrow-icon');

@@ -273,16 +273,15 @@ input:not(:focus):placeholder-shown {
   border-radius: 8px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.075);
   display: grid;
-  gap: 30px;
   grid-template-rows: max-content 1fr max-content;
   padding: 30px;
   transition: all 0.4s;
   width: 350px;
-  height: 200px;
+  height: auto;
 }
 
 .context {
-  margin-top: 6px;
+  margin: 6px;
   font-size: 17px;
 }
 
@@ -315,6 +314,10 @@ input:not(:focus):placeholder-shown {
   gap: 20px 15px;
   grid-template-rows: max-content;
   padding: 30px;
+}
+
+.request-status{
+  margin-top: 46px;
 }
 
 

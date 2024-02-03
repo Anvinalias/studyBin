@@ -16,7 +16,6 @@ $username = $result['username'];
 if (isset($_POST['upload'])) {
 
     $title = $_POST['title'];
-    $details = $_POST['details'];
     $category = $_POST['category'];
     $program = $_POST['program'];
     $course = $_POST['course'];
@@ -26,7 +25,7 @@ if (isset($_POST['upload'])) {
 
     $upfile = $_FILES['file']['name'];
     $ext = pathinfo($upfile, PATHINFO_EXTENSION);
-    $validExt = array('pdf', 'txt', 'doc', 'docx', 'ppt', 'zip', 'jpg');
+    $validExt = array('pdf', 'txt', 'doc', 'docx', 'ppt', 'zip', 'jpg', 'pptx', 'jpeg');
     if (empty($upfile)) {
         echo "<script>alert('Attach a file');</script>";
     } else if ($_FILES['file']['size'] <= 0) {
@@ -41,7 +40,7 @@ if (isset($_POST['upload'])) {
 
         if (move_uploaded_file($_FILES['file']['tmp_name'], $folder . $notefile)) {
 
-            $in = "INSERT INTO resources (title, details, file, category, uploaded_by , program, course, semester,keywords,status) VALUES ('$title', '$details' , '$notefile' , '$category', '$username' , '$program', '$course', '$semester', '$keywords', 'active')";
+            $in = "INSERT INTO resources (title, file, category, uploaded_by , program, course, semester,status) VALUES ('$title' , '$notefile' , '$category', '$username' , '$program', '$course', '$semester', 'active')";
             $stmt = mysqli_prepare($con, $in);
 
             if (!$stmt) {
@@ -94,10 +93,6 @@ if (isset($_POST['upload'])) {
                                 <input type="text" class="form-control" id="title" name="title" required>
                             </div>
                             <div class="mb-3">
-                                <label for="details" class="form-label">Details</label>
-                                <textarea class="form-control" id="details" name="details" rows="3" required></textarea>
-                            </div>
-                            <div class="mb-3">
                                 <label for="file" class="form-label">File</label>
                                 <input type="file" class="form-control" id="file" name="file" required>
                             </div>
@@ -107,10 +102,8 @@ if (isset($_POST['upload'])) {
                                     <option value="notes">Note</option>
                                     <option value="syllabus">Syllabus</option>
                                     <option value="qp">Question Paper</option>
-                                    <option value="summary">Summary</option>
                                     <option value="records">Lab Record</option>
                                     <option value="text">Text Book</option>
-                                    <option value="impque">Important Questions</option>
 
                                 </select>
                             </div>
@@ -161,11 +154,38 @@ if (isset($_POST['upload'])) {
                                             addOption(courseSelect, "c", "Programming using C");
                                             break;
                                         case "Semester2":
-                                            addOption(courseSelect, "coa", "Computer Fundamentals13");
-                                            addOption(courseSelect, "maths2", "Discrete Mathematics 12");
-                                            addOption(courseSelect, "dc", "Digital Fundamentals2");
-                                            addOption(courseSelect, "english2", "Fine tune English2");
-                                            addOption(courseSelect, "cpp", "OOps cpp");
+                                            addOption(courseSelect, "coa", "Computer organization & Architecture");
+                                            addOption(courseSelect, "maths2", "Discrete Mathematics 2");
+                                            addOption(courseSelect, "dc", "Data communication");
+                                            addOption(courseSelect, "english2", "Issue that matter English2");
+                                            addOption(courseSelect, "cpp", "OOP using CPP");
+                                            break;
+                                            case "Semester3":
+                                            addOption(courseSelect, "stati", "Probabillty and statistics");
+                                            addOption(courseSelect, "dbms", "Database Management systems");
+                                            addOption(courseSelect, "sad", "System Analysis and Design");
+                                            addOption(courseSelect, "nf", "Network Fundamentals");
+                                            addOption(courseSelect, "ds", "Data Structure using cpp");
+                                            break;
+                                            case "Semester4":
+                                            addOption(courseSelect, "linux", "linux administartion");
+                                            addOption(courseSelect, "mp", "Microprocessor & Assembly Language Programming");
+                                            addOption(courseSelect, "php", "Web Programming using PHP");
+                                            addOption(courseSelect, "caot", "Computer Aided Optimization Techiques");
+                                            
+                                            break;
+                                            case "Semester5":
+                                            addOption(courseSelect, "ssos", "System Software & Operating System");
+                                            addOption(courseSelect, "it", "IT & Enviroment");
+                                            addOption(courseSelect, "java", "Java programming using linux");
+                                            addOption(courseSelect, "cs", "Computer security");
+                                        
+                                            break;
+                                            case "Semester6":
+                                            addOption(courseSelect, "cg", "Computer Graphics");
+                                            addOption(courseSelect, "bg", "Big Data-Analytics");
+                                            addOption(courseSelect, "py", "Python And Latex");
+                                            
                                             break;
                                         // Add cases for other semesters
                                     }
@@ -182,10 +202,6 @@ if (isset($_POST['upload'])) {
                                 updateCourses();
                             </script>
 
-                            <div class="mb-3">
-                                <label for="keywords" class="form-label">Keywords</label>
-                                <input type="text" class="form-control" id="title" name="keywords" required>
-                            </div>
                             <div class="mb-3">
                                 <button type="submit" class="btn btn-primary" name="upload">Upload</button>
                             </div>

@@ -2,21 +2,21 @@
 include_once('../../includes/config.php');
 // Code for login 
 if (isset($_POST['login'])) {
-    $password = $_POST['password'];
-    $dec_password = md5($password);
-    $useremail = $_POST['email'];
-    $ret = mysqli_query($con, "SELECT user_id, username FROM users WHERE email='$useremail' and password='$dec_password'");
-    $num = mysqli_fetch_array($ret);
-    if ($num > 0) {
+   $password = $_POST['password'];
+   $dec_password = md5($password);
+   $useremail = $_POST['email'];
+   $ret = mysqli_query($con, "SELECT user_id, username FROM users WHERE email='$useremail' and password='$dec_password'");
+   $num = mysqli_fetch_array($ret);
+   if ($num > 0) {
 
-        $_SESSION['id'] = $num['user_id'];
-        $_SESSION['name'] = $num['username'];
-        header("location:../user.php");
-    } else {
-        echo "<script>alert('Invalid username or password');</script>";
-    }
+      $_SESSION['id'] = $num['user_id'];
+      $_SESSION['name'] = $num['username'];
+      header("location:../user.php");
+   } else {
+      echo "<script>alert('Invalid username or password');</script>";
+   }
 }
-?>   
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -57,6 +57,8 @@ if (isset($_POST['login'])) {
             <button name="login" type="submit">
                <span>Continue</span>
             </button>
+            <a href="../signup/signup.php">Dont have an account? Register</a>
+
          </form>
       </section>
    </main>

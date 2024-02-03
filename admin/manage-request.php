@@ -3,16 +3,7 @@ include_once('../includes/config.php');
 if (strlen($_SESSION['adminid']==0)) {
   header('location:logout.php');
   } else{
-// for deleting user
-if(isset($_GET['id']))
-{
-$adminid=$_GET['id'];
-$msg=mysqli_query($con,"delete from user_requests where id='$adminid'");
-if($msg)
-{
-echo "<script>alert('Request deleted');</script>";
-}
-}
+
    ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -74,8 +65,6 @@ echo "<script>alert('Request deleted');</script>";
                                         echo "<td>{$row['created_at']}</td>";
                                         echo "<td>{$row['details']}</td>";
                                         echo "<td>";
-                                        echo "<a href='user-profile.php?uid={$row['id']}'><i class='fas fa-edit'></i></a>";
-                                        echo "<a href='manage-users.php?user_id={$row['id']}' onClick=\"return confirm('Do you really want to delete');\"><i class='fa fa-trash' aria-hidden='true'></i></a>";
                                         echo "</td>";
                                         echo "</tr>";
                                         $cnt++;

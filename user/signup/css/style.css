@@ -19,14 +19,24 @@ body {
 a {
    font-weight: bold;
    text-decoration: none;
-   white-space: nowrap;
    transition: transform 250ms linear;
    display: inline-block;
+   transform: translateZ(0); /* Add this line */
 }
 
 a:hover {
    transform: scale(1.015) translateX(0.5px);
 }
+
+.input-group {
+   position: relative;
+   display: flex;
+   align-items: center;
+   font-size: 1.1rem;
+   transition: transform 200ms ease-in-out;
+   transform: translateZ(0); /* Add this line */
+}
+
 
 h1 {
    margin: 0 0 0.5rem;

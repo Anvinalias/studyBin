@@ -58,9 +58,8 @@ if (strlen($_SESSION['adminid']) == 0) {
                                 <div class="mb-3">
                                     <label for="role" class="form-label">Role</label>
                                     <select id="role" name="role" class="form-control" required>
-                                        <option value="admin">Admin</option>
                                         <option value="student">Student</option>
-                                        <option value="mentor">Mentor</option>
+                                        <option value="admin">Admin</option>
                                     </select>
                                 </div>
                                 <div class="mb-3">

@@ -48,6 +48,10 @@ p a:hover {
   color: var(--hover-link);
 }
 
+a{
+text-decoration: none;
+}
+
 ::placeholder {
   color: var(--light-text);
   font-family: 'Rubik', sans-serif;
@@ -107,7 +111,7 @@ input:not(:focus):placeholder-shown {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.075);
   display: grid;
   grid-template: max-content / 1fr max-content;
-  padding: 15px 20px 15px 30px;
+  padding: 24px;
   gap: 20px;
   overflow: hidden;
 }
@@ -138,6 +142,7 @@ input:not(:focus):placeholder-shown {
 
 .username {
   color: var(--dark-text);
+  font-size: 20px;
 }
 
 .avatar {
@@ -255,6 +260,7 @@ input:not(:focus):placeholder-shown {
   flex-direction: column;
   align-items: center;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 
@@ -269,26 +275,6 @@ input:not(:focus):placeholder-shown {
 }
 
 
-#latest {
-  grid-template-columns: max-content 1fr;
-}
-
-
-.latest-image {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: rgb(229, 229, 229);
-  border-radius: 50%;
-  height: 55px;
-  margin-bottom: 20px;
-  overflow: hidden;
-  width: 55px;
-}
-
-#latest .h-divider {
-  grid-column: 1 / -1;
-}
 
 .folder {
   width: 128px;
@@ -348,6 +334,50 @@ input:not(:focus):placeholder-shown {
 
 #logout:hover {
   background-image: url(img/logout-h.svg);
+}
+
+/* Style the select container */
+.select-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Style the select element */
+#semester {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 250px; /* Adjust the width as needed */
+  padding: 15px;
+  border: 2px solid #000; /* Changed border color to black */
+  border-radius: 10px;
+  background-color: #ecf0f1;
+  color: #000; /* Changed text color to black */
+  font-size: 16px; /* Decreased font size */
+  cursor: pointer;
+}
+
+/* Style the arrow icon for the select */
+#semester::after {
+  content: '\25BC'; /* Unicode character for down arrow */
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Style the options within the dropdown */
+#semester option {
+  background-color: #ecf0f1;
+  color: #000; /* Changed text color to black */
+  font-size: 14px; /* Decreased font size */
+}
+
+/* Hover effect for the options */
+#semester option:hover {
+  background-color: #000; /* Changed hover background color to black */
+  color: #fff;
 }
 
 .upload {

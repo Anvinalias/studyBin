@@ -1,3 +1,12 @@
+<?php
+// Start or resume the session
+session_start();
+
+// Set default values for session variables if not already set
+if (!isset($_SESSION['id'])) {
+    $_SESSION['id'] = null; // Set default user ID
+
+}?>
 <!DOCTYPE html>
 <html lang="en">
 

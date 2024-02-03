@@ -3,16 +3,6 @@ include_once('../includes/config.php');
 if (strlen($_SESSION['adminid']==0)) {
   header('location:logout.php');
   } else{
-// for deleting user
-if(isset($_GET['id']))
-{
-$adminid=$_GET['id'];
-$msg=mysqli_query($con,"delete from resources where id='$adminid'");
-if($msg)
-{
-echo "<script>alert('Resource deleted');</script>";
-}
-}
    ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,7 +26,7 @@ echo "<script>alert('Resource deleted');</script>";
     <?php include_once('includes/side-nav.php'); ?>
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Manage Resources</h1>
+                        <h1 class="mt-4">Resources</h1>
             
                         <div class="card mb-4">
                             <div class="card-header">
@@ -51,13 +41,12 @@ echo "<script>alert('Resource deleted');</script>";
                                     <thead>
                                     <tr>
                                         <th>Title</th>
-                                        <th>Topic</th>   
                                         <th>Category</th>
                                         <th>Course</th>
                                         <th>Semester</th>
-                                        <th>Uploaded By</th>
                                         <th>Status</th>
-                                        <th>Created At</th>
+                                        <th>Uploaded By</th>
+
                                     </tr>
                                 </thead>
                                     
@@ -69,17 +58,12 @@ echo "<script>alert('Resource deleted');</script>";
                                     while ($row = $result->fetch_assoc()) {
                                          echo "<tr>";
                                         echo "<td>{$row['title']}</td>";
-                                        echo "<td>{$row['topic']}</td>";
                                         echo "<td>{$row['category']}</td>";
                                         echo "<td>{$row['course']}</td>";
                                         echo "<td>{$row['semester']}</td>";
-                                        echo "<td>{$row['uploaded_by']}</td>";
                                         echo "<td>{$row['status']}</td>";
-                                        echo "<td>{$row['created_at']}</td>";
-                                        echo "<td>";
-                                        echo "<a href='user-profile.php?uid={$row['id']}'><i class='fas fa-edit'></i></a>";
-                                        echo "<a href='manage-users.php?id={$row['id']}' onClick=\"return confirm('Do you really want to delete');\"><i class='fa fa-trash' aria-hidden='true'></i></a>";
-                                        echo "</td>";
+                                        echo "<td>{$row['uploaded_by']}</td>";
+                            
                                         echo "</tr>";
                                         $cnt++;
                                     }
